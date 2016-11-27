@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.qichen.ruida.ui.Main2Activity">
+    <TextView
+        android:id="@+id/item_tv_time"
+        style="@style/dingdan"
+        android:text="时间:"
+        android:layout_below="@+id/relativeLayout_title"
+        android:drawableLeft="@drawable/dingdanxiangqing_timer"
+        android:padding="@dimen/size_base480_10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <view
+        android:id="@+id/item_view1"
+        android:layout_below="@+id/item_tv_time"
+        android:layout_width="match_parent"
+        android:background="@color/darkgrey"
+        android:layout_height="0.5dp">
+    </view>
+
+    <TextView
+        android:id="@+id/item_tv_start"
+        style="@style/dingdan"
+        android:padding="@dimen/size_base480_10dp"
+        android:text="起点:"
+        android:drawableLeft="@drawable/dingdankaishi"
+        android:layout_below="@+id/item_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/item_tv_end"
+        style="@style/dingdan"
+        android:text="结束:"
+        android:padding="@dimen/size_base480_10dp"
+        android:layout_below="@+id/item_tv_start"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/dingdanjieshu"
+        android:layout_height="wrap_content"/>
+
+    <view
+        android:id="@+id/item_view2"
+        android:background="@color/darkgrey"
+        android:layout_below="@+id/item_tv_end"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp">
+
+    </view>
+    <TextView
+        android:id="@+id/item_tv_status"
+        android:layout_below="@+id/item_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!--<ImageView
+        android:id="@+id/item_iv_1"
+        android:background="@drawable/dingdanxiangqing_weiwancheng"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/relativeLayout_title"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>-->
+
+
+
+    <TextView
+        android:id="@+id/ShowOrderForm_tv"
+        android:text="取消订单"
+        android:padding="@dimen/size_base480_20dp"
+        android:layout_below="@+id/item_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qichen.ruida.view.initAction_Bar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout_title"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.qichen.ruida.ui.OrderInfp_Details_activity">
+    <TextView
+        android:id="@+id/orderinfo_details_tv_pingjia"
+        style="@style/dingdanxiangqing"
+        android:text="评价"
+        android:padding="@dimen/size_base480_20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="@dimen/size_base480_200dp"
+        android:background="@drawable/button_red_n"
+        android:layout_below="@+id/relativeLayout_title"
+        />
+
+
+<TextView
+    android:id="@+id/orderinfo_details_tv1"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv_pingjia"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv2"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv1"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv3"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv2"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv4"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv3"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv5"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv4"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv6"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv5"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv7"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv6"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv8"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv7"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv9"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv8"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv10"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv9"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv11"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv10"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv12"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv11"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv13"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv12"
+    android:visibility="visible"
+    />
+<TextView
+    android:id="@+id/orderinfo_details_tv14"
+    android:text="条目1"
+    style="@style/dingdanxiangqing"
+    android:layout_below="@+id/orderinfo_details_tv13"
+    android:visibility="visible"
+    />
+
+
+
+</com.qichen.ruida.view.initAction_Bar>

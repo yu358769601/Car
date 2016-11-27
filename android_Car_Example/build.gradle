@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        myconfig {
+            keyAlias 'mengmeng'
+            keyPassword 'yu6673160'
+            storeFile file('C:/Users/35876/Desktop/Car/android_Car_Example/mengmeng.jks')
+            storePassword 'yu6673160'
+        }
+    }
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+
+
+    defaultConfig {
+        applicationId "com.qichen.ruida"
+        minSdkVersion 12
+        targetSdkVersion 21
+
+        versionCode 5
+        versionName '1.0.5'
+        signingConfig signingConfigs.myconfig
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.myconfig
+        }
+        debug {
+            signingConfig signingConfigs.myconfig
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile files('libs/AMap_3DMap_V2.4.0.jar')
+    compile files('libs/AMap_Services_V2.4.0.jar')
+    compile files('libs/Android_Location_V1.3.2.jar')
+    compile files('libs/commons-httpclient-3.1.jar')
+    compile files('libs/alipaySdk-20160825.jar')
+    compile files('libs/libammsdk.jar')
+    compile project(':datetimepicker-library')
+    compile project(':libraryauto')
+    compile project(':library_XRefreshView')
+    compile 'com.alibaba:fastjson:1.2.17'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+}

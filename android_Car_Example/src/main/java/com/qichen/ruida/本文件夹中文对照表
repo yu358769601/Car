@@ -1,0 +1,12 @@
+bean        jsonbean
+request     网络请求帮助类
+share       分享页面
+ui          程序主要UI界面
+view        自定义view
+WX          微信主要文件夹
+wxapi       同上
+timer       备用
+Utils       工具类
+UtilsNet    封装好的网络加载工具类 代价密和不带加密
+weixinzhifu 微信支付
+zhifubao    支付宝

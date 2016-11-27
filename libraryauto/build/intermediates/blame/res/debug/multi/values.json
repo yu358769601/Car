@@ -1,0 +1,159 @@
+[
+    {
+        "outputFile": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 70,
+                    "endOffset": 121
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 349,
+                        "endColumn": 70,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 126,
+                    "endColumn": 72,
+                    "endOffset": 194
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 276,
+                        "endColumn": 72,
+                        "endOffset": 344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 199,
+                    "endColumn": 70,
+                    "endOffset": 265
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 577,
+                        "endColumn": 70,
+                        "endOffset": 643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 270,
+                    "endColumn": 66,
+                    "endOffset": 332
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 66,
+                        "endOffset": 118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 337,
+                    "endColumn": 77,
+                    "endOffset": 410
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 498,
+                        "endColumn": 77,
+                        "endOffset": 571
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 415,
+                    "endColumn": 75,
+                    "endOffset": 486
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 199,
+                        "endColumn": 75,
+                        "endOffset": 270
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 491,
+                    "endColumn": 74,
+                    "endOffset": 561
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 124,
+                        "endColumn": 74,
+                        "endOffset": 194
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 566,
+                    "endColumn": 75,
+                    "endOffset": 637
+                },
+                "from": {
+                    "file": "C:\\Users\\35876\\Desktop\\Car\\libraryauto\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 421,
+                        "endColumn": 75,
+                        "endOffset": 492
+                    }
+                }
+            }
+        ]
+    }
+]

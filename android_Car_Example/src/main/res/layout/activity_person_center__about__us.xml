@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person_center__about__us"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.qichen.person.PersonCenter_About_Us">
+    <include
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_title" />
+
+        <Button
+            android:id="@+id/person_button_1"
+            android:layout_below="@+id/title_bar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:text="用户协议"
+            android:background="@drawable/person_button" />
+        <Button
+            android:id="@+id/person_button_2"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/person_button_1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:text="常见问题解答"
+            android:background="@drawable/person_button" />
+        <Button
+            android:id="@+id/person_button_3"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/person_button_2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:text="关于客服"
+            android:background="@drawable/person_button" />
+
+</RelativeLayout>

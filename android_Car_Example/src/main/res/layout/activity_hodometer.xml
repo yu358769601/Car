@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qichen.ruida.view.initAction_Bar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context="com.qichen.ruida.ui.Hodometer">
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xrefreshview"
+        android:layout_below="@+id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+        <com.qichen.ruida.view.MyListView
+            android:id="@+id/Hodometer_listview"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </com.qichen.ruida.view.MyListView>
+    </com.andview.refreshview.XRefreshView>
+
+    <com.qichen.ruida.view.LoadingView_09
+        android:id="@+id/loading_view"
+        android:layout_below="@+id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.qichen.ruida.view.LoadingView_09>
+
+</com.qichen.ruida.view.initAction_Bar>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="20dp"
+
+            android:gravity="center_horizontal"
+            android:id="@+id/pop_layout"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+
+                android:id="@+id/tv_send_pengyou"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:drawableTop="@drawable/iconweixinlogo"
+                android:text="发送给朋友"
+                >
+            </TextView>
+            <TextView
+                android:gravity="center"
+                android:drawableTop="@drawable/icon_weixinpengyouquan1"
+                android:id="@+id/tv_send_pengyouquan"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="发送到朋友圈"
+                >
+
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.qichen.ruida"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 可选 ，如果添加这个权限 apk下载在sdcard中的Android/data/包名/cache目录下 否则下载到 内存中的 /data/data/包名/cache中 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!--
+ Error:Execution failed for task ':android_Car_Example:processDebugManifest'.
+    > Manifest merger failed : Attribute application@theme value=(@android:style/Theme.NoTitleBar) from AndroidManifest.xml:16:9-56
+    is also present at [Car:payDemoActivity:unspecified] AndroidManifest.xml:29:9-62 value=(@android:style/Theme.Light.NoTitleBar).
+    Suggestion: add 'tools:replace="android:theme"' to <application> element at AndroidManifest.xml:11:5-69:19 to override.
+    -->
+    <application
+        android:name="com.qichen.app.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher1"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        tools:replace="android:theme">
+
+        <!--
+            <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="aaf485ea4743c74a15462f0680a55e57" />
+        -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="549899055bb5177311ae09b73bd1860c"/>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DestinationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PersonCenterActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PersonCenterLoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PersonCenterQianBaoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PersonCenterXingChengActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PersonCenterXinXiActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.qichen.person.PhotoInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Timer"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="wx61f9402d62035e9b"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.qichen.zhifubao.demo.PayDemoActivity"
+            android:icon="@drawable/msp_icon"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.qichen.zhifubao.demo.H5PayDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+        <!-- 微信分享 -->
+        <activity
+            android:name=".share.shareActivity"
+            android:theme="@style/MyDialogStyleBottom">
+        </activity>
+        <!-- 开启服务后台下载软件 -->
+        <service
+            android:name="com.loveplusplus.update.DownloadService"
+            android:exported="true"/>
+
+        <!-- 支付选择 -->
+        <activity
+            android:name=".ui.PayActivity"
+            android:theme="@style/MyDialogStyleBottom">
+        </activity>
+        <activity android:name="com.qichen.person.PersonCenter_About_Us">
+        </activity>
+        <activity android:name=".ui.Hodometer">
+        </activity>
+        <activity android:name=".ui.Cancellation_order">
+        </activity>
+        <activity android:name=".ui.ShowOrderForm">
+        </activity>
+
+        <service android:name=".service.MyMsgService"/>
+
+        <activity android:name=".ui.OrderInfp_Details_activity">
+        </activity>
+        <activity android:name=".ui.TestActivity">
+        </activity>
+        <!-- 评价 -->
+        <activity android:name=".ui.AssessActivity">
+        </activity>
+        <activity android:name=".ui.Activity1">
+        </activity>
+        <activity android:name=".ui.photoView">
+        </activity>
+        <activity android:name=".ui.photoView1">
+        </activity>
+    </application>
+
+</manifest>

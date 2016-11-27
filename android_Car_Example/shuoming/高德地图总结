@@ -1,0 +1,33 @@
+ // 设置定位监听
+ //initLocation() 在初始化方法里面写上这个监听 以后只要是坐标改变了 就会执行这个监听里面的方法
+            locationClient.setLocationListener(locationListener);
+             /**
+                 * 定位监听
+                 */
+                AMapLocationListener locationListener = new AMapLocationListener() {
+                    @Override
+                    public void onLocationChanged(AMapLocation loc) {
+                        if (null != loc) {
+                            mLongitude = loc.getLongitude();
+                            mLatitude = loc.getLatitude();
+
+                            //解析定位结果
+                            String result = Utils.getLocationStr(loc);
+                            LogUtils.i("现在定位位置"+result);
+                            mListener.onLocationChanged(loc);// 显示系统小蓝点
+                            //tvReult.setText(result);
+                            //mAMap.animateCamera(CameraUpdateFactory.);
+                            if (tagg){
+                                //移动到某个坐标
+                                mAMap.animateCamera(CameraUpdateFactory.changeLatLng(new LatLng(
+                                        mLatitude,mLongitude)));
+                                //移动到某个做表 并且设置 缩放级别
+                               // mAMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng( mLatitude,mLongitude),mMaxZoomLevel -4));
+                            }
+                            } else {
+                           // tvReult.setText("定位失败，loc is null");
+                            UtilsToast.showToast(Main2Activity_ditu.this,"定位失败，loc is null" );
+                        }
+                    }
+                };
+

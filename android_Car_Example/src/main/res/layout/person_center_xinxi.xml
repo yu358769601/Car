@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/back"
+    android:orientation="vertical"
+    >
+    <!--个人信息xml-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@color/back"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/activity_title" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@null" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@null"
+                    android:orientation="vertical" >
+
+                    <com.rongzhiheng.util.CircleImageView
+                        android:id="@+id/passenger_photo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/person_photo"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@null" />
+
+                    <TextView
+                        android:id="@+id/passenger_tianjia"
+                        android:layout_width="200dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="点击头像添加照片"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/passenger_nickname"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/border_white"
+                android:gravity="center"
+                android:hint="请输入昵称"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/passenger_sex"
+                android:layout_width="200dp"
+                android:layout_height="40dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/border_white"
+                android:gravity="center"
+                android:hint="请选择性别"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="16sp"
+                android:visibility="visible"
+                />
+
+            <Button
+                android:id="@+id/passenger_industry"
+                android:layout_width="200dp"
+                android:layout_height="40dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/border_white"
+                android:gravity="center"
+                android:hint="请选择行业"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/passenger_job"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/border_white"
+                android:gravity="center"
+                android:hint="请输入职位"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="16sp"
+                android:visibility="visible"
+                />
+
+            <Button
+                android:id="@+id/xinxi_queding"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_red"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<com.qichen.ruida.view.LoadingView_09
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.qichen.ruida.view.LoadingView_09>-->
+
+</RelativeLayout>

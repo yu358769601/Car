@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item type="id" name="relativeLayout_title" />
+  <item type="id" name="relativeLayout_title_leftbutton" />
+  <item type="id" name="relativeLayout_title_titleview" />
+  <item type="id" name="relativeLayout_title_rightbutton" />
+
+  <!--Glide选取重要-->
+  <item name="image_tag" type="id"/>
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qichen.ruida.view.initAction_Bar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout_title"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.qichen.ruida.ui.Activity1">
+
+    <ScrollView
+        android:layout_below="@id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--用户协议-->
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv__1_1"
+                    style="@style/shuomingsp"
+                    android:layout_gravity="center"
+                    android:text="@string/shuomingtitle1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="@string/shuomingtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv__1_2"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_3"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/tv__1_4"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv__1_5"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_6"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_7"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_8"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_9"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <!--    <TextView
+                        style="@style/shuomingsp"
+                        android:text="@string/shuoming9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />-->
+                <!--<TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />-->
+                <TextView
+                    android:id="@+id/tv__1_10"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv__1_11"
+                    style="@style/shuomingsp"
+                    android:text="@string/shuoming13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!--常见问题解答-->
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv__2_1"
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/tv__2_2"
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    style="@style/shuomingsp"
+                    android:text="@string/changjianwenti3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shuoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_tishi"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="(图片单击放大)"
+                    android:padding="@dimen/size_base480_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <!--关于客服-->
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_kefu"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="如果有任何问题请致电客户服务热线"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_kefu1"
+                    android:padding="@dimen/size_base480_20dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="4000-765-456"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/shuomingsp"
+                android:padding="@dimen/size_base480_20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@mipmap/rd_57"
+                android:text="@string/shuoming14"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.qichen.ruida.view.initAction_Bar>

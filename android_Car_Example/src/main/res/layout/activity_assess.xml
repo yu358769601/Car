@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qichen.ruida.view.initAction_Bar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    fitsSystemWindow="true"
+    android:background="@color/white"
+
+    >
+    <!--评价xml-->
+
+    <ScrollView
+        android:id="@+id/root"
+        android:layout_below="@+id/relativeLayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:background="@color/white"
+                android:id="@+id/re_top"
+                android:gravity="center"
+                android:padding="20dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_marginRight="20dp"
+                    android:text="匿名"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/selcetno"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_toRightOf="@+id/tv_1"
+                    android:text="实名"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/selcetoff"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view1"
+                android:layout_below="@+id/re_top"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/darkgrey"
+                ></View>
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:id="@+id/re_mid"
+                android:layout_below="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_pingfen"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="评分:"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RatingBar
+                    android:layout_marginLeft="10dp"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_toRightOf="@+id/tv_pingfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar1"
+                    android:rating="0"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                     android:stepSize="0.5"
+
+                android:layout_centerVertical="true"
+
+                    />
+
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_below="@+id/re_mid"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/darkgrey"
+                ></View>
+
+            <RelativeLayout
+                android:id="@+id/re_down"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:layout_below="@+id/view2"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/tv_msg"
+                    android:text="评论内容:"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:layout_below="@+id/tv_msg"
+                    android:layout_width="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/editsharp"
+                    android:layout_height="200dp">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:hint="请留下您的评价,您的评价将直接影响到司机的信誉"
+                            android:textSize="14sp"
+
+                            android:text=""
+                            android:minHeight="200dp"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:id="@+id/et_msg"
+                            android:background="@null"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </ScrollView>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_order"
+                android:layout_below="@+id/re_down"
+                android:text="订单号:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_comtie"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/re_down"
+                android:text="提交评论"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:background="@drawable/button_red"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</com.qichen.ruida.view.initAction_Bar>

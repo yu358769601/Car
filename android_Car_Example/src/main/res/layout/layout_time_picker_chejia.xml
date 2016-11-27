@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:clickable="false"
+    android:focusable="false"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <com.qichen.timer.NumberPicker
+        android:id="@+id/time_day"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <com.qichen.timer.NumberPicker
+        android:id="@+id/time_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <com.qichen.timer.NumberPicker
+        android:id="@+id/time_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="万元"
+        android:textColor="#2FB3F1"
+        android:textSize="20.0sp" />
+
+</LinearLayout>

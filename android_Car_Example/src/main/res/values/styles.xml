@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="callCartitlestyle">
+        <item name="android:padding">@dimen/size_base480_10dp</item>
+    </style>
+
+    <style name="backblack">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">  
+        <!-- 边框 -->  
+        <item name="android:windowFrame">@null</item>  
+        <!-- 是否浮现在activity  false 是全的   true 是左右会留一点 -->  
+        <item name="android:windowIsFloating">true</item>  
+        <!-- 半透明 -->  
+        <item name="android:windowIsTranslucent">true</item>  
+        <!-- 无标题 -->  
+        <item name="android:windowNoTitle">true</item>  
+        <!-- 背景透明 -->  
+        <item name="android:windowBackground">@android:color/transparent</item>  
+        <!-- 模糊 -->  
+        <item name="android:backgroundDimEnabled">true</item>  
+        <!--全屏-->
+        <item name="android:windowFullscreen">false</item>
+        <!--动画-->
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+    </style>  
+
+
+    <!--微信分享 的效果-->
+    <style name="sc_FullScreenDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--分享里面的样式-->
+
+    <style name="AnimBottom">  
+        <item name="android:activityOpenEnterAnimation">@anim/push_bottom_in</item>
+        <!-- <item name="android:activityOpenExitAnimation">@anim/hold</item>-->
+        <item name="android:activityCloseEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_buttom_out</item>
+        <!--      <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>  
+             <item name="android:windowExitAnimation">@anim/push_buttom_out</item>-->  
+    </style> 
+
+    <!--关于我们字体大小-->
+    <style name="shuomingsp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+    <!--取消订单的布局按钮-->
+    <style name="cancellation_order_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/btn_jinqian</item>
+        <item name="android:padding">@dimen/size_base480_10dp</item>
+        <item name="android:layout_margin">@dimen/size_base480_10dp</item>
+    </style>
+    
+    
+    
+    <style name="dingdan">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        
+    </style>
+    <style name="dingdanxiangqing">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/size_base480_10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+
+</resources>

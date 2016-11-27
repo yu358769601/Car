@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+              android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msp_demo_title_bg"
+        android:scaleType="center"
+        android:src="@drawable/msp_demo_title"
+        tools:ignore="ContentDescription" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_below="@+id/iv_title"
+        android:name="com.qichen.zhifubao.demo.ExternalFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.qichen.ruida.view.LoadingView_09
+        android:id="@+id/loading_view"
+        android:layout_below="@+id/iv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.qichen.ruida.view.LoadingView_09>
+</RelativeLayout>

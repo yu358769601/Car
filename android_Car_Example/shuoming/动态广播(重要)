@@ -1,0 +1,41 @@
+//接收方
+        //生命周期方法里面注册广播
+        //注册广播接收者
+		IntentFilter filter = new IntentFilter("test");
+		registerReceiver(receiver, filter);
+
+		//在成员变量的位置 创建一个  广播接收类
+	    private InnerReceiver receiver = new InnerReceiver();
+
+	    	//接收别的地方过来的数据 写一个内容类
+        	public class InnerReceiver extends BroadcastReceiver {
+
+        		@Override
+        		public void onReceive(Context context, Intent intent) {
+        			//使用intent获取发送过来的数据
+
+        			String msg = intent.getStringExtra("msg");
+        			LogUtils.i("过来的数据是"+msg);
+        			if (!TextUtils.isEmpty(msg)){
+        				mCallbackString = msg;
+        				//mRouteCostText.setText(mRouteCostText.getText().toString()+msg);
+        			}
+        		}
+        	}
+
+
+        	@Override
+            	protected void onDestroy() {
+            		super.onDestroy();
+            		//取消广播
+            		unregisterReceiver(receiver);
+            		}
+
+            	}
+
+//发送方
+        //创建一个意图 然后放进去数据 发送
+        	Intent intent1 = new Intent("test");
+        					intent1.putExtra("msg", tv_appointment_time_show.getText().toString());
+        					LogUtils.i("发送广播"+tv_appointment_time_show.getText().toString());
+        					sendBroadcast(intent1);

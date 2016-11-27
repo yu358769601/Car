@@ -1,0 +1,1537 @@
+[
+    {
+        "NextCityList": [
+            {
+                "cityId": 110000,
+                "cityLevel": "",
+                "cityName": "北京市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 150700,
+                "cityLevel": "",
+                "cityName": "呼伦贝尔市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 310000,
+                "cityLevel": "",
+                "cityName": "上海市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 330100,
+                "cityLevel": "",
+                "cityName": "杭州市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 341000,
+                "cityLevel": "",
+                "cityName": "黄山市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 410100,
+                "cityLevel": "",
+                "cityName": "郑州市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 410300,
+                "cityLevel": "",
+                "cityName": "洛阳市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 420100,
+                "cityLevel": "",
+                "cityName": "武汉市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 420500,
+                "cityLevel": "",
+                "cityName": "宜昌市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 429000,
+                "cityLevel": "",
+                "cityName": "省直辖行政单位",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 430100,
+                "cityLevel": "",
+                "cityName": "长沙市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 430300,
+                "cityLevel": "",
+                "cityName": "湘潭市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 430800,
+                "cityLevel": "",
+                "cityName": "张家界市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 460200,
+                "cityLevel": "",
+                "cityName": "三亚市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 500000,
+                "cityLevel": "",
+                "cityName": "重庆市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 540100,
+                "cityLevel": "",
+                "cityName": "拉萨市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 610100,
+                "cityLevel": "",
+                "cityName": "西安市",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 659000,
+                "cityLevel": "",
+                "cityName": "省直辖行政单位",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": "",
+            "cityLevel": "",
+            "cityName": "国内",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [
+            {
+                "cityId": 1832,
+                "cityLevel": "",
+                "cityName": "韩国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2152,
+                "cityLevel": "",
+                "cityName": "柬埔寨",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2686,
+                "cityLevel": "",
+                "cityName": "蒙古",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3005,
+                "cityLevel": "",
+                "cityName": "日本",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3292,
+                "cityLevel": "",
+                "cityName": "泰国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3759,
+                "cityLevel": "",
+                "cityName": "新加坡",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3951,
+                "cityLevel": "",
+                "cityName": "印度",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3982,
+                "cityLevel": "",
+                "cityName": "印度尼西亚",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": 8001,
+            "cityLevel": "",
+            "cityName": "亚洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [
+            {
+                "cityId": 1027,
+                "cityLevel": "",
+                "cityName": "爱沙尼亚",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 1251,
+                "cityLevel": "",
+                "cityName": "比利时",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 1441,
+                "cityLevel": "",
+                "cityName": "丹麦",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 1456,
+                "cityLevel": "",
+                "cityName": "德国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 1636,
+                "cityLevel": "",
+                "cityName": "法国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 1671,
+                "cityLevel": "",
+                "cityName": "芬兰",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2008,
+                "cityLevel": "",
+                "cityName": "荷兰",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3053,
+                "cityLevel": "",
+                "cityName": "瑞典",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3075,
+                "cityLevel": "",
+                "cityName": "瑞士",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3430,
+                "cityLevel": "",
+                "cityName": "土耳其",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3884,
+                "cityLevel": "",
+                "cityName": "意大利",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 4011,
+                "cityLevel": "",
+                "cityName": "英国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": 8002,
+            "cityLevel": "",
+            "cityName": "欧洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [
+            {
+                "cityId": 1,
+                "cityLevel": "",
+                "cityName": "美国",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2095,
+                "cityLevel": "",
+                "cityName": "加拿大",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2773,
+                "cityLevel": "",
+                "cityName": "墨西哥",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": 8003,
+            "cityLevel": "",
+            "cityName": "北美洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [],
+        "desCity": {
+            "cityId": 8004,
+            "cityLevel": "",
+            "cityName": "南美洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [
+            {
+                "cityId": 1083,
+                "cityLevel": "",
+                "cityName": "澳大利亚",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 3761,
+                "cityLevel": "",
+                "cityName": "新西兰",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": 8005,
+            "cityLevel": "",
+            "cityName": "大洋洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [
+            {
+                "cityId": 982,
+                "cityLevel": "",
+                "cityName": "埃及",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2269,
+                "cityLevel": "",
+                "cityName": "肯尼亚",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            },
+            {
+                "cityId": 2656,
+                "cityLevel": "",
+                "cityName": "毛里求斯",
+                "cityNumber": "",
+                "cityRegion": "",
+                "cityState": "",
+                "csCityIds": "",
+                "homeAbroad": "",
+                "isChild": "",
+                "isFy": "",
+                "isGnSfCity": "",
+                "isPortCity": "",
+                "pager": {
+                    "maxCount": 0,
+                    "minCount": 0,
+                    "page": 1,
+                    "pageCount": 10,
+                    "totalCount": 0,
+                    "totalPage": 0
+                },
+                "parentId": "",
+                "scmParamChildCityList": "",
+                "scmParamPlaceList": ""
+            }
+        ],
+        "desCity": {
+            "cityId": 8006,
+            "cityLevel": "",
+            "cityName": "非洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    },
+    {
+        "NextCityList": [],
+        "desCity": {
+            "cityId": 8007,
+            "cityLevel": "",
+            "cityName": "南极洲",
+            "cityNumber": "",
+            "cityRegion": "",
+            "cityState": "",
+            "csCityIds": "",
+            "homeAbroad": "",
+            "isChild": "",
+            "isFy": "",
+            "isGnSfCity": "",
+            "isPortCity": "",
+            "pager": {
+                "maxCount": 0,
+                "minCount": 0,
+                "page": 1,
+                "pageCount": 10,
+                "totalCount": 0,
+                "totalPage": 0
+            },
+            "parentId": "",
+            "scmParamChildCityList": "",
+            "scmParamPlaceList": ""
+        }
+    }
+]
+
+
+
+
+解决方法
+
+
+package com.example.a35876.mydemo.bean;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by 35876 于萌萌
+ * 创建日期: 11:33 . 2016年10月14日
+ * 描述:
+ * <p/>
+ * <p/>
+ * 备注:
+ */
+public class ssss {
+
+    /**
+     * cityId :
+     * cityLevel :
+     * cityName : 国内
+     * cityNumber :
+     * cityRegion :
+     * cityState :
+     * csCityIds :
+     * homeAbroad :
+     * isChild :
+     * isFy :
+     * isGnSfCity :
+     * isPortCity :
+     * pager : {"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0}
+     * parentId :
+     * scmParamChildCityList :
+     * scmParamPlaceList :
+     */
+
+    public DesCityBean desCity;
+    /**
+     * NextCityList : [{"cityId":110000,"cityLevel":"","cityName":"北京市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":150700,"cityLevel":"","cityName":"呼伦贝尔市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":310000,"cityLevel":"","cityName":"上海市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":330100,"cityLevel":"","cityName":"杭州市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":341000,"cityLevel":"","cityName":"黄山市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":410100,"cityLevel":"","cityName":"郑州市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":410300,"cityLevel":"","cityName":"洛阳市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":420100,"cityLevel":"","cityName":"武汉市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":420500,"cityLevel":"","cityName":"宜昌市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":429000,"cityLevel":"","cityName":"省直辖行政单位","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":430100,"cityLevel":"","cityName":"长沙市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":430300,"cityLevel":"","cityName":"湘潭市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":430800,"cityLevel":"","cityName":"张家界市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":460200,"cityLevel":"","cityName":"三亚市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":500000,"cityLevel":"","cityName":"重庆市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":540100,"cityLevel":"","cityName":"拉萨市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":610100,"cityLevel":"","cityName":"西安市","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""},{"cityId":659000,"cityLevel":"","cityName":"省直辖行政单位","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""}]
+     * desCity : {"cityId":"","cityLevel":"","cityName":"国内","cityNumber":"","cityRegion":"","cityState":"","csCityIds":"","homeAbroad":"","isChild":"","isFy":"","isGnSfCity":"","isPortCity":"","pager":{"maxCount":0,"minCount":0,"page":1,"pageCount":10,"totalCount":0,"totalPage":0},"parentId":"","scmParamChildCityList":"","scmParamPlaceList":""}
+     */
+
+    public List<DesCityBean> NextCityList;
+
+    public static List<ssss> arrayssssFromData(String str, String key) {
+
+        //JSONObject jsonObject = new JSONObject(str);
+        Type listType = new TypeToken<ArrayList<ssss>>() {
+        }.getType();
+
+        return new Gson().fromJson(str, listType);
+
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "ssss{" +
+                "desCity=" + desCity +
+                ", NextCityList=" + NextCityList +
+                '}';
+    }
+
+    public static class DesCityBean {
+        public String cityId;
+        public String cityLevel;
+        public String cityName;
+        public String cityNumber;
+        public String cityRegion;
+        public String cityState;
+        public String csCityIds;
+        public String homeAbroad;
+        public String isChild;
+        public String isFy;
+        public String isGnSfCity;
+        public String isPortCity;
+
+        @Override
+        public String toString() {
+            return "DesCityBean{" +
+                    "cityId='" + cityId + '\'' +
+                    ", cityLevel='" + cityLevel + '\'' +
+                    ", cityName='" + cityName + '\'' +
+                    ", cityNumber='" + cityNumber + '\'' +
+                    ", cityRegion='" + cityRegion + '\'' +
+                    ", cityState='" + cityState + '\'' +
+                    ", csCityIds='" + csCityIds + '\'' +
+                    ", homeAbroad='" + homeAbroad + '\'' +
+                    ", isChild='" + isChild + '\'' +
+                    ", isFy='" + isFy + '\'' +
+                    ", isGnSfCity='" + isGnSfCity + '\'' +
+                    ", isPortCity='" + isPortCity + '\'' +
+                    ", pager=" + pager +
+                    ", parentId='" + parentId + '\'' +
+                    ", scmParamChildCityList='" + scmParamChildCityList + '\'' +
+                    ", scmParamPlaceList='" + scmParamPlaceList + '\'' +
+                    '}';
+        }
+
+        /**
+         * maxCount : 0
+         * minCount : 0
+         * page : 1
+         * pageCount : 10
+         * totalCount : 0
+         * totalPage : 0
+         */
+
+        public PagerBean pager;
+        public String parentId;
+        public String scmParamChildCityList;
+        public String scmParamPlaceList;
+
+
+
+        public static class PagerBean {
+            public int maxCount;
+            public int minCount;
+            public int page;
+            public int pageCount;
+            public int totalCount;
+            public int totalPage;
+
+            @Override
+            public String toString() {
+                return "PagerBean{" +
+                        "maxCount=" + maxCount +
+                        ", minCount=" + minCount +
+                        ", page=" + page +
+                        ", pageCount=" + pageCount +
+                        ", totalCount=" + totalCount +
+                        ", totalPage=" + totalPage +
+                        '}';
+            }
+        }
+        }
+    }
+
+
+
+    /**
+     * 0 : 2.0
+     * 2 : 程序猿哥哥们悄悄地和你讲 有让人羞羞的新版本发布了哟
+     */
+

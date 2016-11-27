@@ -1,0 +1,3 @@
+打开Teminal
+keytool -v -list -keystore C:\Users\35876\Desktop\MyDemo\yumengmeng.jks
+密码就是jks 名字
