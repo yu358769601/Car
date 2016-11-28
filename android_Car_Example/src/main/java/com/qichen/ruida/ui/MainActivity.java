@@ -3,18 +3,14 @@ package com.qichen.ruida.ui;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.ServiceConnection;
 import android.graphics.BitmapFactory;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Message;
 import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
@@ -74,8 +70,9 @@ import com.qichen.ruida.Utils_1;
 import com.qichen.ruida.WX.WXPayUtils;
 import com.qichen.ruida.base.BaseActivity;
 import com.qichen.ruida.bean.PeripheralInfo;
-import com.qichen.ruida.bean.oderinfostatus;
 import com.qichen.ruida.broadcastReceivers.UtilsBroadcastReceiver;
+import com.qichen.ruida.mianMVP.P.MainP;
+import com.qichen.ruida.mianMVP.interface_.MainCallBack;
 import com.qichen.ruida.request.CancellationOfOrder;
 import com.qichen.ruida.request.SendOrder;
 import com.qichen.ruida.request.UpDataRegist;
@@ -85,13 +82,11 @@ import com.rongzhiheng.util.Constants;
 
 import java.util.Hashtable;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static com.qichen.ruida.R.id.textView1;
 
 //主界面MainActivity 带广告 lala
-public class MainActivity extends BaseActivity implements OnCameraChangeListener, OnMapLoadedListener, OnLocationGetListener, OnClickListener, OnRouteCalculateListener, OnRouteSearchListener, AMap.OnMarkerClickListener {
+public class MainActivity extends BaseActivity implements OnCameraChangeListener, OnMapLoadedListener, OnLocationGetListener, OnClickListener, OnRouteCalculateListener, OnRouteSearchListener, AMap.OnMarkerClickListener ,MainCallBack {
 	//路线规划 可以删除 路线规划的痕迹  和小汽车
 	private DrivingRouteOverlay drivingRouteOverlay;
 
@@ -103,7 +98,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 	private TextView mAddressTextView;
 
-	private Button mDestinationButton;
+	public Button mDestinationButton;
 
 	private Marker mPositionMark;
 
@@ -131,7 +126,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 	private long currentTime;
 
-	private int Tagclass = 0;
+	public int Tagclass = 0;
 
 	public String yuan;
 	public String juli;
@@ -178,7 +173,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
     private TextView location_imagecc;
 	private ImageView location_zhifu;
 	private ImageView location_fenxiang;
-	public ExecutorService mExecutorService;
+
 	private Button cancel_button;
 	//是否轮询
 	boolean tag =true;
@@ -239,9 +234,9 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 						i++;
 						LogUtils.i("时间"+i);
 
-						if (null!=mExecutorService){
-							if (!mExecutorService.isShutdown())
-								mExecutorService.submit(new loopNet());
+						if (null!=mMainC.mExecutorService){
+							if (!mMainC.mExecutorService.isShutdown())
+								mMainC.mExecutorService.submit(new loopNet());
 							//mExecutorService.shutdown();
 						}
 					}
@@ -271,7 +266,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 					if (timers>0){
 						UtilsBroadcastReceiver.sendBroadcastReceiver(MainActivity.this, "timerStatus","timeRun",timers);
 						LogUtils.i("设置倒计时步骤3"+"倒计时数大于1"+"目前的倒计时数量是"+timers+"并且发了广播让别人也修改成倒计时数"+"之后又到了 循环-- 的步骤2");
-						mDownTime.submit(new downTimer());
+						mMainC.mDownTime.submit(new downTimer());
 						//设置显示
 						location_imagecc.setText("未接订单有效期:"+timers);
 						//LogUtils.i("倒计时时间"+timers);
@@ -312,8 +307,8 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 	private ImageView mQidong;
 	//乘客 订单状态
 	private String mOrder_state;
-	private ExecutorService mStartlogo;
-	private ExecutorService mDownTime;
+	//控制器
+	public MainP mMainC;
 
 	public static MainActivity getactivity(){
 		return mActivity;
@@ -321,6 +316,26 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 	//服务
 	private Intent mBindIntent;
+
+	@Override
+	public void succeed(String string) {
+		LogUtils.i(string);
+	}
+
+	@Override
+	public void Failure(String string) {
+
+	}
+
+	@Override
+	public void getOrder_id(String mOder_id) {
+		this.mOder_id = mOder_id;
+	}
+
+	@Override
+	public void getOrder_state(String mOrder_state) {
+		this.mOrder_state = mOrder_state;
+	}
 	//进到查看订单详情必须的
 	//private String mOrder_id;
 
@@ -333,7 +348,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 
 
-	//主页面创建
+	//主界面创建
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -341,7 +356,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		init(savedInstanceState);
 		initView();
 		LogUtils.i("声音");
-
+		initC();
 
 
 			//如果手机联网了
@@ -356,7 +371,6 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 		tag =true;
 
-		initThreadPool();
 
 
 		//注册广播接收者 修改成我要用车的字
@@ -397,6 +411,17 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 //				return my_broadcastReceiver;
 //			}
 //		});
+	}
+	//初始化 控制器
+	private void initC() {
+		mMainC = new MainP(this);
+		//创建线程池
+		mMainC.initThreadPool();
+		//初始化mMainC 回调
+		mMainC.setListener(this);
+		//绑定一个服务
+		mMainC.doBindSerive();
+
 	}
 
 
@@ -467,24 +492,6 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 
 
-	/**
-	 * 创建线程池
-	 */
-	private void initThreadPool() {
-
-		//创建一个线程池 这个线程池的作用是 轮询访问网络  获取周边信息
-		mExecutorService = Executors.newSingleThreadExecutor();
-		mExecutorService.submit(new loopNet());
-
-
-		//创建一个线程池 延时 改变logo
-		mStartlogo = Executors.newSingleThreadExecutor();
-		mStartlogo.submit(new logo());
-
-		//倒计时的线程池
-		mDownTime = Executors.newFixedThreadPool(4);
-
-	}
 
 	@Override
 	public int getlayouXML() {
@@ -524,7 +531,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		mLocation_image2.setVisibility(View.GONE);
 		//清除
 		location_imagecc = (TextView) findViewById(R.id.location_imagecc);
-		location_imagecc.setVisibility(View.VISIBLE);
+		location_imagecc.setVisibility(View.GONE);
 		//微信支付
 		location_zhifu = (ImageView) findViewById(R.id.location_zhifu);
 		location_zhifu.setVisibility(View.GONE);
@@ -605,113 +612,113 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 
 	private void initService() {
-		doBindSerive();
+		//doBindSerive();
 		//UtilsSound.sound(MainActivity.this);
 	}
 		//代理人对象
-	private MyMsgService.MyBind myBinder;
+	//private MyMsgService.MyBind myBinder;
 
-	private ServiceConnection conn = new ServiceConnection() {
-		boolean tag = false;
-
-		//当Activity和Service连接成功时会调用该方法
-		@Override
-		public void onServiceConnected(ComponentName name, IBinder service) {
-			// TODO Auto-generated method stub
-			//在这里通过自定义的Binder与Service通信  代理人对象
-			myBinder = (MyMsgService.MyBind)service;
-			mMyMsgService = myBinder.getMyMsgService();
-			mMyMsgService.setCallBackOrderInfo(new MyMsgService.CallBackOrderInfo() {
-
-		//服务回调
-				@Override
-				public void callBackOrder(JSONObject jsonObject) {
-					LogUtils.i("轮询获取订单数据"+jsonObject);
-					oderinfostatus data = jsonObject.getObject("data", oderinfostatus.class);
-					LogUtils.i("主页面设置订单号"+data.order_id);
-					//订单号(重要)
-					mOder_id =data.order_id;
-					LogUtils.i("订单状态轮询"+data.order_state);
-					//乘客订单状态
-					mOrder_state = data.order_state;
-//订单状态 0 未被接单  1 已接单  2 乘客已上车 3 订单完成
-//  4 乘客取消订单 5 司机到达目的地(乘客未上车) 6司机取消订单  -1没订单
-
-//					if (!order_stuatus.equals(data.order_state)){
-//								//有订单  如果是未接单
-//								order_stuatus_frist = false;
-//					}
-
-					//发了订单 未接
-					if ("0".equals(data.order_state)){
-						//order_stuatus_frist = false;
-						LogUtils.i("订单状态不是-1"+"号码是"+data.order_id);
-						//用这个数值 去打开 查看订单
-						Tagclass = 1;
-						//mDestinationButton.setText("查看订单");
-						//mDestinationButton.setText("查看订单"+timers);
-						tag = true;
-					}else if ("1".equals(data.order_state)){
-						//mDestinationButton.setText("查看订单");
-						//mDestinationButton.setText("查看订单"+timers);
-					}else if ("-1".equals(data.order_state)){
-						//mDestinationButton.setText("我要用车");
-						//没进来过
-						if (tag){
-							tag =false;
-							mDestinationButton.setText("输入目的地");
-						}
-					}
-
-
-
-				}
-			});
-			//服务回调
-//			MyMsgService.setCallBackOrderInfo(new MyMsgService.CallBackOrderInfo() {
+//	private ServiceConnection conn = new ServiceConnection() {
+//		boolean tag = false;
+//
+//		//当Activity和Service连接成功时会调用该方法
+//		@Override
+//		public void onServiceConnected(ComponentName name, IBinder service) {
+//			// TODO Auto-generated method stub
+//			//在这里通过自定义的Binder与Service通信  代理人对象
+//			myBinder = (MyMsgService.MyBind)service;
+//			mMyMsgService = myBinder.getMyMsgService();
+//			mMyMsgService.setCallBackOrderInfo(new MyMsgService.CallBackOrderInfo() {
+//
+//		//服务回调
 //				@Override
 //				public void callBackOrder(JSONObject jsonObject) {
-//					LogUtils.i("静态回调 主页面 订单数据"+jsonObject);
+//					LogUtils.i("轮询获取订单数据"+jsonObject);
 //					oderinfostatus data = jsonObject.getObject("data", oderinfostatus.class);
 //					LogUtils.i("主页面设置订单号"+data.order_id);
-//					mOrder_id = data.order_id;
-//					if (SQUtils.isCallCar(MainActivity.this)){
-//						mDestinationButton.setText("查看订单");
+//					//订单号(重要)
+//					mOder_id =data.order_id;
+//					LogUtils.i("订单状态轮询"+data.order_state);
+//					//乘客订单状态
+//					mOrder_state = data.order_state;
+////订单状态 0 未被接单  1 已接单  2 乘客已上车 3 订单完成
+////  4 乘客取消订单 5 司机到达目的地(乘客未上车) 6司机取消订单  -1没订单
+//
+////					if (!order_stuatus.equals(data.order_state)){
+////								//有订单  如果是未接单
+////								order_stuatus_frist = false;
+////					}
+//
+//					//发了订单 未接
+//					if ("0".equals(data.order_state)){
+//						//order_stuatus_frist = false;
+//						LogUtils.i("订单状态不是-1"+"号码是"+data.order_id);
+//						//用这个数值 去打开 查看订单
+//						Tagclass = 1;
+//						//mDestinationButton.setText("查看订单");
+//						//mDestinationButton.setText("查看订单"+timers);
+//						tag = true;
+//					}else if ("1".equals(data.order_state)){
+//						//mDestinationButton.setText("查看订单");
+//						//mDestinationButton.setText("查看订单"+timers);
+//					}else if ("-1".equals(data.order_state)){
+//						//mDestinationButton.setText("我要用车");
+//						//没进来过
+//						if (tag){
+//							tag =false;
+//							mDestinationButton.setText("输入目的地");
+//						}
 //					}
+//
+//
+//
 //				}
 //			});
-		}
-
-
-		//当Activity和Service断开连接时会调用该方法
-		@Override
-		public void onServiceDisconnected(ComponentName name) {
-			// TODO Auto-generated method stub
-
-		}
-
-	};
+//			//服务回调
+////			MyMsgService.setCallBackOrderInfo(new MyMsgService.CallBackOrderInfo() {
+////				@Override
+////				public void callBackOrder(JSONObject jsonObject) {
+////					LogUtils.i("静态回调 主页面 订单数据"+jsonObject);
+////					oderinfostatus data = jsonObject.getObject("data", oderinfostatus.class);
+////					LogUtils.i("主页面设置订单号"+data.order_id);
+////					mOrder_id = data.order_id;
+////					if (SQUtils.isCallCar(MainActivity.this)){
+////						mDestinationButton.setText("查看订单");
+////					}
+////				}
+////			});
+//		}
+//
+//
+//		//当Activity和Service断开连接时会调用该方法
+//		@Override
+//		public void onServiceDisconnected(ComponentName name) {
+//			// TODO Auto-generated method stub
+//
+//		}
+//
+//	};
 
 	/**
 	 * 通过bindService()启动(绑定)Service
 	 */
-	private void doBindSerive()
-	{
-		mBindIntent = new Intent(this, MyMsgService.class);
-		//bindIntent.setAction("com.test.service.My_MSG");
-		//当Service还没创建时,
-		//第三个参数如果为0则不自动创建Service,为Service.BIND_AUTO_CREATE则自动创建
-		bindService(mBindIntent, conn, Service.BIND_AUTO_CREATE);
-	}
+//	private void doBindSerive()
+//	{
+//		mBindIntent = new Intent(this, MyMsgService.class);
+//		//bindIntent.setAction("com.test.service.My_MSG");
+//		//当Service还没创建时,
+//		//第三个参数如果为0则不自动创建Service,为Service.BIND_AUTO_CREATE则自动创建
+//		bindService(mBindIntent, conn, Service.BIND_AUTO_CREATE);
+//	}
 
-	/**
-	 * 解除绑定Service
-	 */
-	private void doUnbindService()
-	{
-		unbindService(conn);
-		stopService(mBindIntent);
-	}
+//	/**
+//	 * 解除绑定Service
+//	 */
+//	private void doUnbindService()
+//	{
+//		unbindService(conn);
+//		stopService(mBindIntent);
+//	}
 	public CallBack CallBacktitleString;
 
 	public interface CallBacktitleString{
@@ -839,7 +846,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		}
 	}
 
-	public loopNet getloopNetClass(){
+	public   loopNet getloopNetClass(){
 		return new loopNet();
 	}
 	//循环体
@@ -908,6 +915,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 
 	}
+	public logo getLogoClass(){
+		return new logo();
+	}
+
 	//广告计时类
 	class logo implements Runnable{
 
@@ -1044,10 +1055,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		super.onResume();
 		mMapView.onResume();
 
-		if (null!=mExecutorService){
+		if (null!=mMainC.mExecutorService){
 			tag = true;
-			if (!mExecutorService.isShutdown())
-				mExecutorService.submit(new loopNet());
+			if (!mMainC.mExecutorService.isShutdown())
+				mMainC.mExecutorService.submit(new loopNet());
 //			ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
 //			scheduledExecutorService.schedule()
 
@@ -1108,12 +1119,12 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 		//取消广播 设置字体的
 		unregisterReceiver(receivercar);
-		if (null!=mExecutorService){
+		if (null!=mMainC.mExecutorService){
 			LogUtils.i("关闭了程序 关闭线程");
-			mExecutorService.shutdownNow();
+			mMainC.mExecutorService.shutdownNow();
 		}
-
-		doUnbindService();
+		mMainC.doUnbindService();
+		//doUnbindService();
 		//registerReceiver(my_broadcastReceiver);
 	}
 
@@ -1204,7 +1215,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 							mDestinationButton.setText("查看订单"+timers);
 							mDestinationButton.setClickable(true);
 							//开始了倒计时
-							mDownTime.submit(new downTimer());
+							mMainC.mDownTime.submit(new downTimer());
 						}
 					}
 
@@ -1372,10 +1383,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 				startActivity(new Intent(this,shareActivity.class));
 				break;
 			case R.id.location_openxiancheng:
-				if (null!=mExecutorService){
+				if (null!=mMainC.mExecutorService){
 					tag = true;
-					if (!mExecutorService.isShutdown())
-						mExecutorService.submit(new loopNet());
+					if (!mMainC.mExecutorService.isShutdown())
+						mMainC.mExecutorService.submit(new loopNet());
 				}
 				break;
 
@@ -1577,30 +1588,30 @@ private InnerReceiver receiver = new InnerReceiver();
 	}
 
 
-	/**
-	 *
-	 * @param distance 公里数
-	 * @param duration 时间
-     */
-	public double[] sun(float distance, int duration){
-		// 公里数小于 <=3 公里  9元 +时间(分钟) * 0.3元
-		//   >3  <=15 公里  9元  + (当前公里数 -3) *2 +时间(分钟) *0.3元
-		// >15公里  9元 + 12公里 *2  + (当前公里数 -15) *2.8 +时间(分钟) *0.3元
-		double[] doubles = {};
-		double Result =0.0;
-		if (distance<=3){
-			// 公里数小于 <=3 公里  9元 +时间(分钟) * 0.3元
-			Result =9+(duration*0.3);
-		}else if (distance>3 && distance<=15){
-			//   >3  <=15 公里  9元  + (当前公里数 -3) *2 +时间(分钟) *0.3元
-			Result =(9+(distance-3)*2)+(duration*0.3);
-		}else{
-			Result =(9+(12*2)+(distance-15) *2.8)+(duration*0.3);
-		}
-		doubles = new double[]{Result,9,0.3};
-		return doubles;
-
-	}
+//	/**
+//	 *
+//	 * @param distance 公里数
+//	 * @param duration 时间
+//     */
+//	public double[] sun(float distance, int duration){
+//		// 公里数小于 <=3 公里  9元 +时间(分钟) * 0.3元
+//		//   >3  <=15 公里  9元  + (当前公里数 -3) *2 +时间(分钟) *0.3元
+//		// >15公里  9元 + 12公里 *2  + (当前公里数 -15) *2.8 +时间(分钟) *0.3元
+//		double[] doubles = {};
+//		double Result =0.0;
+//		if (distance<=3){
+//			// 公里数小于 <=3 公里  9元 +时间(分钟) * 0.3元
+//			Result =9+(duration*0.3);
+//		}else if (distance>3 && distance<=15){
+//			//   >3  <=15 公里  9元  + (当前公里数 -3) *2 +时间(分钟) *0.3元
+//			Result =(9+(distance-3)*2)+(duration*0.3);
+//		}else{
+//			Result =(9+(12*2)+(distance-15) *2.8)+(duration*0.3);
+//		}
+//		doubles = new double[]{Result,9,0.3};
+//		return doubles;
+//
+//	}
 	/**
 	 * 获取估算信息
 	 * @param cost 钱
@@ -1616,12 +1627,13 @@ private InnerReceiver receiver = new InnerReceiver();
 		mDesitinationText.setText(RouteTask.getInstance(getApplicationContext()).getEndPoint().address);
 		if (TextUtils.isEmpty(mCallbackString)){
 			//String.format("预估费用%.2f元，距离%.1fkm，用时%d分", cost, distance, duration);
-			sun = sun(distance, duration);
+			 sun = mMainC.sun(distance, duration);
+			//sun = sun(distance, duration);
 			mRouteCostText.setText(String.format("预估费用%.2f元，距离%.1fkm，用时%d分 \n其中起车费%.1f元 ， 服务费%.1f元/分钟", (sun[0]*msgs), distance, duration,sun[1],sun[2]));
 
 		}else{
 			//mRouteCostText.setText(String.format("预估费用%.2f元，距离%.1fkm，用时%d分", cost, distance, duration)+"\t"+"预约时间"+mCallbackString);
-			sun = sun(distance, duration);
+			sun = mMainC.sun(distance, duration);
 			mRouteCostText.setText(String.format("预估费用%.2f元，距离%.1fkm，用时%d分 \n其中起车费%.1f元 ， 服务费%.1f元/分钟", (sun[0]*msgs), distance, duration,sun[1],sun[2]));
 		}
 

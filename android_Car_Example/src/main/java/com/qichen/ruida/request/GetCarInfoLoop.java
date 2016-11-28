@@ -77,10 +77,10 @@ public class GetCarInfoLoop {
 
             mActivity1.i++;
             LogUtils.i("时间"+mActivity1.i);
-            if (null!=mActivity1.mExecutorService){
-                if (!mActivity1.mExecutorService.isShutdown()){
+            if (null!=mActivity1.mMainC.mExecutorService){
+                if (!mActivity1.mMainC.mExecutorService.isShutdown()){
                     LogUtils.i("提交出来的");
-                    mActivity1.mExecutorService.submit(mActivity1.getloopNetClass());
+                    mActivity1.mMainC.mExecutorService.submit(mActivity1.getloopNetClass());
                 }
                 //mExecutorService.shutdown();
             }

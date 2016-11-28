@@ -25,15 +25,16 @@ public class Constants {
 	public static final String LOGTAG = "ruidakuaiche";
 
 	//测试服务器
-//	public static String new_url = "http://192.168.0.202/wangyueche/ruida_passenger.php";
-//	public static String image_url = "http://192.168.0.202/wangyueche/upload_img.php?app=ruida&passenger_id=";
-//	public static String fangwen_image_url = "http://192.168.0.202/wangyueche/upload_file/";
+	public static String new_url = "http://192.168.0.202/wangyueche/ruida_passenger.php";
+	public static String image_url = "http://192.168.0.202/wangyueche/upload_img.php?app=ruida&passenger_id=";
+	public static String fangwen_image_url = "http://192.168.0.202/wangyueche/upload_file/";
 
 	//正式服务器
-	public static String new_url = "http://59.110.11.60/ruida_passenger.php";
-	public static String image_url = "http://59.110.11.60/upload_img.php?app=ruida&passenger_id=";
-	public static String fangwen_image_url = "http://59.110.11.60/upload_file/";
+//	public static String new_url = "http://59.110.11.60/ruida_passenger.php";
+//	public static String image_url = "http://59.110.11.60/upload_img.php?app=ruida&passenger_id=";
+//	public static String fangwen_image_url = "http://59.110.11.60/upload_file/";
 
+	//微信支付
 	public static String weixin_url = "http://59.110.11.60/weixin.php";
 
 	public static String key = "heilongjiang-rdk";

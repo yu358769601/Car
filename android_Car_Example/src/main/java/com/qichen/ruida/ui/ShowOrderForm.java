@@ -74,88 +74,6 @@ public class ShowOrderForm extends BaseActivity {
         registerReceiver(receiver2, filter2);
 
 
-//        //轮询获取订单编号
-//        setCallBackbroadcastReceiver("msg", new GetCallBackbroadcastReceiver() {
-//            @Override
-//            public My_broadcastReceiver getbroadcastReceiver() {
-//                My_broadcastReceiver my_broadcastReceiver = new My_broadcastReceiver(new BroadcastReceiverCallBack() {
-//                    @Override
-//                    public void CallBack(final Context context, Intent intent) {
-//                        //使用intent获取发送过来的数据
-//                        mMsg1 = (oderinfostatus) intent.getSerializableExtra("order");
-//                        LogUtils.i("过来的数据服务器是"+ mMsg1);
-//                        LogUtils.i("轮询订单号是"+ mMsg1.order_id);
-//
-//                        if (null!=mItem_tv_time)
-//                            mItem_tv_time.setText("时间:"+ mMsg1.order_add_time);
-//                        if (null!=mItem_tv_start)
-//                            mItem_tv_start.setText("起点:"+ mMsg1.begion_address);
-//                        if (null!=mItem_tv_end)
-//                            mItem_tv_end.setText("终点:"+ mMsg1.end_address);
-//                        if (null!=item_tv_status)
-//                            item_tv_status.setText("订单状态:"+ mMsg1.order_state);
-//
-//                        String tv = "";
-//                        if ("0".equals(mMsg1.order_state)) {
-//                            tv = "未接单";
-//                        } else if ("1".equals(mMsg1.order_state)) {
-//                            tv = "已接单";
-//                        } else if ("2".equals(mMsg1.order_state)) {
-//                            tv = "乘客已上车";
-//                        } else if ("3".equals(mMsg1.order_state)) {
-//                            tv = "订单完成";
-//                            //订单完成 关掉界面
-//                            ShowOrderForm.this.finish();
-//                            LogUtils.i("订单完成 关掉界面");
-//                        } else if ("4".equals(mMsg1.order_state)) {
-//                            tv = "乘客取消订单";
-//                        } else if ("5".equals(mMsg1.order_state)) {
-//                            tv = "司机到达目的地";
-//                        } else if ("6".equals(mMsg1.order_state)) {
-//                            tv = "司机取消订单";
-//                            ShowOrderForm.this.finish();
-//                            LogUtils.i("订单取消 关掉界面");
-//                        }else {
-//                            finish();
-//                            LogUtils.i("关掉界面");
-//                        }
-//                        //设定订单状态
-//                        if (null!=item_tv_status)
-//                            item_tv_status.setText("订单状态:"+tv);
-//                        //只要订单不是未接单 我就显示司机信息
-//                        if (!"0".equals(mMsg1.order_state)) {
-//                            //车牌号
-//                            item_tv_carnumber.setText("车牌号:"+mMsg1.driver_car);
-//                            item_tv_carnumber.setVisibility(View.VISIBLE);
-//
-//                            item_tv_carname.setText("司机名字:"+UtilsMyText.getfristString(mMsg1.driver_realname)+"师傅");
-//                            item_tv_carname.setVisibility(View.VISIBLE);
-//                            //车电话
-//                            item_tv_carphone.setText("联系方式:"+mMsg1.driver_telephone);
-//                            item_tv_carphone.setVisibility(View.VISIBLE);
-//                            item_tv_carphone.setOnClickListener(new View.OnClickListener() {
-//                                @Override
-//                                public void onClick(View v) {
-//                                    call(context, mMsg1.driver_telephone);
-//                                }
-//                            });
-//                        }else{
-//                            item_tv_carname.setVisibility(View.GONE);
-//                            item_tv_carphone.setVisibility(View.GONE);
-//                            item_tv_carnumber.setVisibility(View.GONE);
-//                        }
-//
-//                        //关闭的指令
-//                        String order_close = intent.getStringExtra("order_close");
-//
-//
-//                    }
-//                });
-//
-//                return my_broadcastReceiver;
-//            }
-//        });
-
 
     }
     //获取前一个界面过来的消息
@@ -164,10 +82,6 @@ public class ShowOrderForm extends BaseActivity {
         mOder_id = extras.getString("order_id");
         LogUtils.i("查看订单订单号码是"+mOder_id);
         mOrder_tag = extras.getInt("order_tag");
-//        Intent intent = getIntent();
-//         mOder_id = intent.getStringExtra("order_id");
-//        mOrder_tag = intent.getIntExtra("order_tag",0);
-      //  LogUtils.i("查看订单订单号码是"+mOder_id);
     }
 
 
@@ -272,12 +186,16 @@ public class ShowOrderForm extends BaseActivity {
             String tv = "";
             if ("0".equals(mMsg1.order_state)) {
                 tv = "未接单";
+                item_tv_timer.setVisibility(View.VISIBLE);
             } else if ("1".equals(mMsg1.order_state)) {
                 tv = "已接单";
+                item_tv_timer.setVisibility(View.GONE);
             } else if ("2".equals(mMsg1.order_state)) {
                 tv = "乘客已上车";
+                item_tv_timer.setVisibility(View.GONE);
             } else if ("3".equals(mMsg1.order_state)) {
                 tv = "订单完成";
+                item_tv_timer.setVisibility(View.GONE);
                 //订单完成 关掉界面
                 ShowOrderForm.this.finish();
                 LogUtils.i("订单完成 关掉界面");
@@ -389,44 +307,6 @@ public class ShowOrderForm extends BaseActivity {
 //        String url5 ="http://img3.duitang.com/uploads/item/201608/20/20160820091508_diTXf.thumb.700_0.jpeg";
 //        String url6 ="http://joymepic.joyme.com/article/uploads/allimg/201609/1473906749455425.jpg?watermark/1/image/aHR0cDovL2pveW1lcGljLmpveW1lLmNvbS9hcnRpY2xlL3VwbG9hZHMvMTYwODE5LzgwLTE2MFE5MUZaMzQzOC5wbmc=/dissolve/70";
 //        String url7 ="http://d.hiphotos.baidu.com/image/pic/item/0ff41bd5ad6eddc492d491153ddbb6fd52663328.jpg";
-        if (null!=mOder_id)
-        GetOrderDetail.request(this, new NetAesCallBack() {
-            @Override
-            public void onSucceed(JSONObject jsonObject) {
-                LogUtils.i("订单详情网络数据"+jsonObject);
-                //jsonObject.getObject("",);
-
-                Order data = jsonObject.getObject("data", Order.class);
-                if (null!=data){
-                    mItemRecyclerview = new itemRecyclerview(ShowOrderForm.this, 2, data, new itemRecyclerview.CallBack() {
-                        @Override
-                        public void itemOnClick(View view) {
-                            switch (view.getId()){
-                                case R.id.ShowOrderForm_tv_cancel_an_order:
-                                    LogUtils.i("在订单详情里面点击了取消订单");
-                                    Intent intent1 = new Intent(ShowOrderForm.this, Cancellation_order.class);
-                                    Bundle bundle = new Bundle();
-                                    bundle.putString("order_id",mMsg1.order_id);
-                                    intent1.putExtras(bundle);
-                                    startActivity(intent1);
-                                    break;
-                            }
-                        }
-                    });
-                    //mMyrecyclerview_12_rc.setAdapter(mItemRecyclerview);
-
-                }
-
-            }
-
-            @Override
-            public void onError(String errorString) {
-
-            }
-        });
-
-
-
 
         mItem_tv_time = (TextView) findViewById(R.id.item_tv_time);
         mItem_tv_start = (TextView) findViewById(R.id.item_tv_start);
@@ -443,11 +323,60 @@ public class ShowOrderForm extends BaseActivity {
         //车电话
         item_tv_carphone = (TextView) findViewById(R.id.item_tv_carphone);
         //未接单
-        if (mOrder_tag ==1){
+        if (mOrder_tag ==-1){
             item_tv_carnumber.setVisibility(View.GONE);
             item_tv_carname.setVisibility(View.GONE);
             item_tv_carphone.setVisibility(View.GONE);
+            //item_tv_timer.setVisibility(View.GONE);
         }
+
+
+        if (null!=mOder_id)
+        GetOrderDetail.request(this, new NetAesCallBack() {
+            @Override
+            public void onSucceed(JSONObject jsonObject) {
+                LogUtils.i("订单详情网络数据"+jsonObject);
+                //jsonObject.getObject("",);
+
+                Order data = jsonObject.getObject("data", Order.class);
+                if (!"0".equals(data.order_state)){
+
+                    item_tv_timer.setVisibility(View.GONE);
+                }
+//                if (null!=data){
+//
+//                    mItemRecyclerview = new itemRecyclerview(ShowOrderForm.this, 2, data, new itemRecyclerview.CallBack() {
+//                        @Override
+//                        public void itemOnClick(View view) {
+//                            switch (view.getId()){
+//                                case R.id.ShowOrderForm_tv_cancel_an_order:
+//                                    LogUtils.i("在订单详情里面点击了取消订单");
+//                                    Intent intent1 = new Intent(ShowOrderForm.this, Cancellation_order.class);
+//                                    Bundle bundle = new Bundle();
+//                                    bundle.putString("order_id",mMsg1.order_id);
+//                                    intent1.putExtras(bundle);
+//                                    startActivity(intent1);
+//                                    break;
+//                            }
+//                        }
+//                    });
+//
+//
+//                    //mMyrecyclerview_12_rc.setAdapter(mItemRecyclerview);
+//
+//                }
+
+            }
+
+            @Override
+            public void onError(String errorString) {
+
+            }
+        });
+
+
+
+
         initListener();
         initData();
     }
