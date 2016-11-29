@@ -5,7 +5,8 @@ import java.util.List;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 13:25 . 2016年11月20日
- * 描述:
+ * 描述: 订单列表bean
+ * getPassengerOverOrder
  * <p>
  * <p>
  * 备注:

@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 13:05 . 2016年11月19日
- * 描述:
+ * 描述:passengerGetOrder
  * <p>
  * <p>
  * 备注:

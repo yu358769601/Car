@@ -13,7 +13,7 @@ import android.content.Intent;
  * 备注:
  */
 
-public class My_broadcastReceiver extends BroadcastReceiver {
+public  class My_broadcastReceiver extends BroadcastReceiver {
 
 
     BroadcastReceiverCallBack broadcastReceiverCallBack;

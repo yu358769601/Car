@@ -3,7 +3,8 @@ package com.qichen.ruida.bean;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 13:35 . 2016年11月15日
- * 描述:
+ * 描述:支付宝bean
+ * zhifubaoPay
  * <p>
  * <p>
  * 备注:

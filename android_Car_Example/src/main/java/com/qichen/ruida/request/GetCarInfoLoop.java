@@ -55,7 +55,7 @@ public class GetCarInfoLoop {
                                     //Double.parseDouble(message);
                                     //jsonObject.get();
                                     //添加覆盖物
-                                    mActivity1.addMarkerData(peripheralInfo);
+                                    //mActivity1.addMarkerData(peripheralInfo);
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }

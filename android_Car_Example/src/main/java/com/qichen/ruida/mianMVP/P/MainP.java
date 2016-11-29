@@ -8,13 +8,19 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 
 import com.alibaba.fastjson.JSONObject;
+import com.amap.api.maps.AMap;
 import com.qichen.Utils.LogUtils;
+import com.qichen.Utils.UtilsToast;
 import com.qichen.ruida.MVP_base.MVP_base;
+import com.qichen.ruida.Utils_1;
+import com.qichen.ruida.bean.DriverPositon;
+import com.qichen.ruida.bean.PeripheralInfo;
 import com.qichen.ruida.bean.oderinfostatus;
 import com.qichen.ruida.mianMVP.interface_.MainCallBack;
 import com.qichen.ruida.service.MyMsgService;
 import com.qichen.ruida.ui.MainActivity;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -189,6 +195,30 @@ public class MainP extends MVP_base<MainCallBack> {
     public void doUnbindService() {
         context.unbindService(conn);
         context.stopService(mBindIntent);
+    }
+
+    @Override
+    public void addMarkerData(AMap mAmap,DriverPositon driverPositon) {
+        LogUtils.i("添加单个覆盖物"+driverPositon);
+        if (null!=driverPositon){
+            Utils_1.addEmulateData(mAmap, driverPositon);
+            return;
+        }
+
+    UtilsToast.showToast(context, "没有获取到周边车辆信息");
+    }
+
+    @Override
+    public void addMarkerData(AMap mAmap,PeripheralInfo peripheralInfo) {
+        if (null!=peripheralInfo.data  ){
+            List<PeripheralInfo.DataBean> data = peripheralInfo.data;
+            if (data.size()>0){
+                Utils_1.addEmulateData(mAmap, data);
+                return;
+            }
+        }
+
+        UtilsToast.showToast(context, "没有获取到周边车辆信息");
     }
 
 

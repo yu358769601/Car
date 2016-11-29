@@ -66,9 +66,9 @@ import com.qichen.ruida.R;
 import com.qichen.ruida.RegeocodeTask;
 import com.qichen.ruida.RouteTask;
 import com.qichen.ruida.RouteTask.OnRouteCalculateListener;
-import com.qichen.ruida.Utils_1;
 import com.qichen.ruida.WX.WXPayUtils;
 import com.qichen.ruida.base.BaseActivity;
+import com.qichen.ruida.bean.DriverPositon;
 import com.qichen.ruida.bean.PeripheralInfo;
 import com.qichen.ruida.broadcastReceivers.UtilsBroadcastReceiver;
 import com.qichen.ruida.mianMVP.P.MainP;
@@ -81,7 +81,6 @@ import com.qichen.ruida.share.shareActivity;
 import com.rongzhiheng.util.Constants;
 
 import java.util.Hashtable;
-import java.util.List;
 
 import static com.qichen.ruida.R.id.textView1;
 
@@ -211,8 +210,73 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 												//Double.parseDouble(message);
 												//jsonObject.get();
-												//添加覆盖物
-												addMarkerData(peripheralInfo);
+													//添加 所有周边 覆盖物
+												mMainC.addMarkerData(mAmap,peripheralInfo);
+
+											}catch (Exception e){
+												e.printStackTrace();
+											}
+
+
+										}
+
+
+									}
+
+									@Override
+									public void onError(String errorString) {
+										LogUtils.i("网络过来的数据"+errorString);
+									}
+								});
+
+
+
+						i++;
+						LogUtils.i("时间"+i);
+
+						if (null!=mMainC.mExecutorService){
+							if (!mMainC.mExecutorService.isShutdown())
+								mMainC.mExecutorService.submit(new loopNet());
+							//mExecutorService.shutdown();
+						}
+					}
+
+
+				break;
+				case 10:
+					if (null!=mStartPosition){
+						Hashtable<String, String> hashtable = new Hashtable<String, String>();
+						//必要字段
+	//					passengerPosition action
+	//					passenger_lon 经度
+	//					passenger_lat 纬度
+	//					passenger_id 用户身份
+						//获取周边司机位置
+						hashtable.put("action","getDriverPositon");
+						hashtable.put("order_id",mOder_id);
+						//hashtable.put("passenger_id",SQUtils.getId(MainActivity.this));
+
+						NetMessage.get(MainActivity.this)
+								.sendMessage(Constants.new_url, hashtable, Constants.NORMAL, new NetAesCallBack() {
+									@Override
+									public void onSucceed(JSONObject jsonObject) {
+										LogUtils.i("单独司机的数据"+jsonObject);
+										if (null!=jsonObject){
+											try{
+												DriverPositon data = jsonObject.getObject("data", DriverPositon.class);
+												if (null!=data){
+													mMainC.addMarkerData(mAmap, data);
+												}
+//												PeripheralInfo peripheralInfo = jsonObject.toJavaObject(PeripheralInfo.class);
+//												LogUtils.i("乘客周边数据PeripheralInfo"+peripheralInfo);
+//												Double message = jsonObject.getDouble("message");
+//												msgs = message;
+//
+//												//Double.parseDouble(message);
+//												//jsonObject.get();
+//													//添加 单个覆盖物
+//
+
 											}catch (Exception e){
 												e.printStackTrace();
 											}
@@ -306,6 +370,8 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 	private SoundPool soundPool;
 	private ImageView mQidong;
 	//乘客 订单状态
+	//订单状态 0 未被接单  1 已接单  2 乘客已上车 3 订单完成
+	//  4 乘客取消订单 5 司机到达目的地(乘客未上车) 6司机取消订单  -1没订单
 	private String mOrder_state;
 	//控制器
 	public MainP mMainC;
@@ -421,6 +487,8 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		mMainC.setListener(this);
 		//绑定一个服务
 		mMainC.doBindSerive();
+		//添加一个覆盖物
+		//mMainC.addMarkerData(mAmap, new DriverPositon());
 
 	}
 
@@ -856,7 +924,15 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 			//现在是开启状态
 				if (tag){
 					Message message = mHandler.obtainMessage();
-					message.what = 1;
+
+					//如果订单状态 变成了 1  说明有司机接单了
+					if ("1".equals(mOrder_state)){
+						//添加单个周边
+						message.what = 10;
+					}else{
+						//添加 所有周边 覆盖物
+						message.what = 1;
+					}
 					mHandler.sendMessage(message);
 					SystemClock.sleep(10000);
 				}
@@ -1494,21 +1570,7 @@ private InnerReceiver receiver = new InnerReceiver();
 
 	}
 
-    /**
-     * 添加覆盖物数据
-     */
-    public void addMarkerData(PeripheralInfo peripheralInfo) {
-		if (null!=peripheralInfo.data  ){
-			List<PeripheralInfo.DataBean> data = peripheralInfo.data;
-			if (data.size()>0){
-				Utils_1.addEmulateData(mAmap, data);
-				return;
-			}
 
-		}
-		UtilsToast.showToast(this, "没有获取到周边车辆信息");
-
-    }
 	//重新定位之后的经纬度
 	//当单位移动了 调用的方法
     @Override

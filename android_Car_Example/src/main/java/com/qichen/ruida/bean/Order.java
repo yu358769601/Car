@@ -3,7 +3,8 @@ package com.qichen.ruida.bean;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 11:41 . 2016年11月20日
- * 描述:
+ * 描述:订单bean
+ * passengerGetOrderDetail
  * <p>
  * <p>
  * 备注:

@@ -17,6 +17,7 @@ import com.qichen.Utils.LogUtils;
 import com.qichen.Utils.UtilsToast;
 import com.qichen.app.AppContext;
 import com.qichen.ruida.bean.Carbean;
+import com.qichen.ruida.bean.DriverPositon;
 import com.qichen.ruida.bean.PeripheralInfo;
 
 import java.util.ArrayList;
@@ -71,23 +72,32 @@ public class Utils_1 {
      * @param data 装有坐标信息的对象集合
      */
     public static void addEmulateData(AMap amap, List<PeripheralInfo.DataBean> data) {
-        BitmapDescriptor bitmapDescriptor;
+        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.car1);
         Carbean.DataBean dataBean;
         //清除 之前的 覆盖物
         Utils_1.removeMarker();
+
            for (int i = 0; i < data.size(); i++) {
                PeripheralInfo.DataBean bean = data.get(i);
-               bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.car1);
                  addMarkers(amap,bean, bitmapDescriptor);
-//               if (Integer.parseInt(bean.) ==0){
-//                   bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.icon_car);
-//                   addMarkers(amap,dataBean, bitmapDescriptor);
-//               }
-//               if (Integer.parseInt(dataBean.order_state) ==1){
-//                    bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.icon_end);
-//                   addMarkers(amap, dataBean,bitmapDescriptor);
-//               }
+
            }
+        //是否模拟点
+        if (false){
+            for (int i = 0; i < 10; i++) {
+                double latitudeDelt = (Math.random() - 0.5) * 0.1;
+                double longtitudeDelt = (Math.random() - 0.5) * 0.1;
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.setFlat(true);
+                markerOptions.anchor(0.5f, 0.5f);
+                markerOptions.icon(bitmapDescriptor);
+                markerOptions.position(new LatLng(45.7389670+latitudeDelt , 126.5699260+longtitudeDelt));
+                Marker marker = amap.addMarker(markerOptions);
+                markers.add(marker);
+            }
+        }
+
+
         LogUtils.i("这个没有路过吗");
         UtilsToast.showToast(AppContext.getApplication(), "共发现周边"+data.size()+"个司机师傅"+"请耐心等待");
        }
@@ -122,5 +132,41 @@ public class Utils_1 {
         }
         markers.clear();
         return true;
+    }
+
+    /**
+     * 添加单个 的覆盖物
+     * @param amap
+     * @param driverPositon
+     * @param bitmapDescriptor
+     */
+    private static void addMarker(AMap amap, DriverPositon driverPositon, BitmapDescriptor bitmapDescriptor){
+        double begion_lon = Double.parseDouble(driverPositon.positon_lon);
+        double begion_lat = Double.parseDouble(driverPositon.positon_lat);
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.setFlat(true);
+
+        markerOptions.anchor(0.5f, 0.5f);
+        markerOptions.icon(bitmapDescriptor);
+        LogUtils.i("添加了"+"begion_lon"+"\t"+begion_lon+"\n"+"begion_lat"+"\t"+begion_lat);
+        // 坑爹 先纬度  后精度
+        markerOptions.position(new LatLng(begion_lat,begion_lon));
+        Marker marker = amap.addMarker(markerOptions);
+        LogUtils.i("添加了"+driverPositon.driver_id);
+        // marker.setTitle(bean.positon_id);
+        markers.add(marker);
+    }
+
+    //通过单独的 司机对象去 设置 覆盖物
+    public static void addEmulateData(AMap mAmap, DriverPositon driverPositon) {
+        BitmapDescriptor bitmapDescriptor;
+        //清除 之前的 覆盖物
+        Utils_1.removeMarker();
+        bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.car1);
+        addMarker(mAmap,driverPositon,bitmapDescriptor);
+
+
+
+
     }
 }
