@@ -143,5 +143,18 @@
         android:layout_marginRight="99dp"
         android:layout_marginEnd="99dp"/>
 
+    <TextView
+        android:id="@+id/tv_juli"
+        android:text="距离:"
+        android:padding="@dimen/size_base480_10dp"
+        style="@style/dingdan"
+        android:layout_marginRight="83dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_view1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="83dp"/>
+
 
 </com.qichen.ruida.view.initAction_Bar>

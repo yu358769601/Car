@@ -51,6 +51,7 @@ import com.loveplusplus.update.AppUtils;
 import com.loveplusplus.update.CallBack;
 import com.loveplusplus.update.UpdateDialog;
 import com.qichen.Constantss.Constantss;
+import com.qichen.Utils.DialogUtils;
 import com.qichen.Utils.LogUtils;
 import com.qichen.Utils.NetworkUtils;
 import com.qichen.Utils.SQUtils;
@@ -69,6 +70,7 @@ import com.qichen.ruida.RouteTask.OnRouteCalculateListener;
 import com.qichen.ruida.WX.WXPayUtils;
 import com.qichen.ruida.base.BaseActivity;
 import com.qichen.ruida.bean.DriverPositon;
+import com.qichen.ruida.bean.GetSiji;
 import com.qichen.ruida.bean.PeripheralInfo;
 import com.qichen.ruida.broadcastReceivers.UtilsBroadcastReceiver;
 import com.qichen.ruida.mianMVP.P.MainP;
@@ -244,7 +246,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 				break;
 				case 10:
-					if (null!=mStartPosition){
+					if (null!=mStartPosition && null!=mOder_id){
 						Hashtable<String, String> hashtable = new Hashtable<String, String>();
 						//必要字段
 	//					passengerPosition action
@@ -452,6 +454,11 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		IntentFilter filter2 = new IntentFilter("timerStatus");
 		registerReceiver(receiver2, filter2);
 
+
+		//获取显示dialog 的通知
+		IntentFilter filter3 = new IntentFilter("dialog");
+		registerReceiver(receiver3, filter3);
+
 		//初始化服务 轮询获取消息的方法
 		initService();
 		//生命周期方法里面注册广播
@@ -491,6 +498,25 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		//mMainC.addMarkerData(mAmap, new DriverPositon());
 
 	}
+	//在成员变量的位置 创建一个  广播接收类 显示dialog
+	private InnerReceiver3 receiver3 = new InnerReceiver3();
+
+	public class InnerReceiver3 extends BroadcastReceiver{
+
+		@Override
+		public void onReceive(final Context context, Intent intent) {
+			GetSiji chauffeur = (GetSiji) intent.getSerializableExtra("chauffeur");
+
+			DialogUtils.showDialog(context, "有司机已接单", chauffeur.toString(),"我知道了","",0 ,new DialogUtils.callback() {
+				@Override
+				public void confirm(String selectorButton, String which) {
+					//UtilsToast.showToast(context, "朕知道了");
+
+				}
+			});
+		}}
+
+
 
 
 	//在成员变量的位置 创建一个  广播接收类 接收倒计时时间
@@ -970,6 +996,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 					showDialog(MainActivity.this, "更新", 1, "http://59.110.11.60/APK/ruida.apk", new CallBack() {
 						@Override
 						public void callDownLoad() {
+
 							UtilsToast.showToast(MainActivity.this, "正在后台下载更新");
 						}
 
@@ -1192,6 +1219,8 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		unregisterReceiver(receiver);
 		//取消广播 取消倒计时
 		unregisterReceiver(receiver2);
+		//取消广播 取消倒计时
+		unregisterReceiver(receiver3);
 
 		//取消广播 设置字体的
 		unregisterReceiver(receivercar);
@@ -1240,19 +1269,22 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 		//intent_1.putExtra("order_tag",Tagclass);
 		bundle.putString("order_id",mOder_id);
 		bundle.putInt("order_tag",Tagclass);
+		bundle.putDouble("siji_latitude",mStartPosition.latitude);
+		bundle.putDouble("siji_longitude",mStartPosition.longitude);
 		intent_1.putExtras(bundle);
 		LogUtils.i("主界面订单号码"+mOder_id);
 		if (!SQUtils.isLogin(this)) {
 			startActivity(intent99);
-			return;
-		} else if (SQUtils.isCallCar(this)){
-			startActivity(intent_1);
 			return;
 		}
 
 		switch (v.getId()) {
 			//点了起始点
 			case R.id.address_text:
+				if (SQUtils.isCallCar(this)){
+					startActivity(intent_1);
+					return;
+				}
 				intent.putExtra("tag",4);
 				mYuyue_text.setVisibility(View.GONE);
 				mYuyue_text.setText("");
@@ -1262,6 +1294,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 
 			//点击了请输入目的地的
 		case R.id.destination_button:
+			if (SQUtils.isCallCar(this)){
+				startActivity(intent_1);
+				return;
+			}
 			//如果这个按钮上面的字是 输入目的地
 			if ("输入目的地".equals(mDestinationButton.getText())) {
 				order_type = 0;
@@ -1311,6 +1347,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 			//打车
 			case R.id.textView1:
 				LogUtils.i("按了一下打车");
+				if (SQUtils.isCallCar(this)){
+					startActivity(intent_1);
+					return;
+				}
 					intent.putExtra("tag",0);
 					mYuyue_text.setVisibility(View.GONE);
 					mYuyue_text.setText("");
@@ -1326,6 +1366,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 				break;
 		//预约打车
 		case R.id.textView2:
+			if (SQUtils.isCallCar(this)){
+				startActivity(intent_1);
+				return;
+			}
 			order_type = 1;
 				intent.putExtra("tag",1);
 				startActivity(intent);
@@ -1333,6 +1377,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 			break;
 		//接机场
 		case R.id.textView3:
+			if (SQUtils.isCallCar(this)){
+				startActivity(intent_1);
+				return;
+			}
 			order_type = 2;
 //			intent.putExtra("tag",2);
 //			startActivity(intent);
@@ -1361,6 +1409,10 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 			break;
 		//送机场
 		case R.id.textView4:
+			if (SQUtils.isCallCar(this)){
+				startActivity(intent_1);
+				return;
+			}
 			order_type = 3;
 //			intent.putExtra("tag",3);
 //			startActivity(intent);

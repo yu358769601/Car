@@ -7,16 +7,7 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* .gitignore
-* LICENSE
-* README.md
-* apk\
-* apk\Android_Car_Example.apk
 * ic_launcher-web.png
-* pic\
-* pic\mark.png
-* pic\result.png
-* pic\search.png
 * proguard-project.txt
 
 Replaced Jars with Dependencies:
@@ -29,26 +20,17 @@ the .jar file in your project was of an older version than the
 dependency we picked, which could render the project not compileable.
 You can disable the jar replacement in the import wizard and try again:
 
-android-support-v4.jar => com.android.support:support-v4:19.+
+android-support-v4.jar => com.android.support:support-v4:18.+
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => android_Car_Example\src\main\AndroidManifest.xml
-* libs\AMap_3DMap_V2.4.0.jar => android_Car_Example\libs\AMap_3DMap_V2.4.0.jar
-* libs\AMap_Services_V2.4.0.jar => android_Car_Example\libs\AMap_Services_V2.4.0.jar
-* libs\Android_Location_V1.3.2.jar => android_Car_Example\libs\Android_Location_V1.3.2.jar
-* libs\armeabi-v7a\libamapv304.so => android_Car_Example\src\main\jniLibs\armeabi-v7a\libamapv304.so
-* libs\armeabi-v7a\libamapv304ex.so => android_Car_Example\src\main\jniLibs\armeabi-v7a\libamapv304ex.so
-* libs\armeabi\libamapv304.so => android_Car_Example\src\main\jniLibs\armeabi\libamapv304.so
-* libs\armeabi\libamapv304ex.so => android_Car_Example\src\main\jniLibs\armeabi\libamapv304ex.so
-* libs\commons-httpclient-3.1.jar => android_Car_Example\libs\commons-httpclient-3.1.jar
-* libs\x86\libamapv304.so => android_Car_Example\src\main\jniLibs\x86\libamapv304.so
-* libs\x86\libamapv304ex.so => android_Car_Example\src\main\jniLibs\x86\libamapv304ex.so
-* res\ => android_Car_Example\src\main\res\
-* src\ => android_Car_Example\src\main\java\
+* AndroidManifest.xml => notifications\src\main\AndroidManifest.xml
+* assets\ => notifications\src\main\assets\
+* res\ => notifications\src\main\res\
+* src\ => notifications\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------

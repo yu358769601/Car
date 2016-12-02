@@ -17,6 +17,7 @@ import com.qichen.Utils.UtilsToast;
 import com.qichen.UtilsNet.NetAesCallBack;
 import com.qichen.UtilsNet.NetMessage;
 import com.qichen.ruida.R;
+import com.qichen.ruida.bean.GetSiji;
 import com.qichen.ruida.bean.oderinfostatus;
 import com.qichen.ruida.broadcastReceivers.UtilsBroadcastReceiver;
 import com.rongzhiheng.util.Constants;
@@ -136,7 +137,7 @@ public class MyMsgService extends Service {
                 Message message = mHandler.obtainMessage();
                 message.what = 1;
                 mHandler.sendMessage(message);
-                SystemClock.sleep(2000);
+                SystemClock.sleep(4000);
 
         }
 
@@ -166,10 +167,16 @@ public class MyMsgService extends Service {
                                 Intent intent1 = new Intent("data");
                                 oderinfostatus data = jsonObject.getObject("data", oderinfostatus.class);
                                 intent1.putExtra("msg1", data);
-                                LogUtils.i("发送广播服务广播");
+                                LogUtils.i("发送广播服务广播内容是"+data);
                                 sendBroadcast(intent1);
 
                                 UtilsBroadcastReceiver.sendBroadcastReceiver(MyMsgService.this, "order_Info","order","服务器后台发数据了 附近的车辆信息");
+                                //带司机自己的位置的
+                                GetSiji data1 = jsonObject.getObject("data", GetSiji.class);
+                                //整到这
+                                UtilsBroadcastReceiver.sendBroadcastReceiver(MyMsgService.this, "siji","siji_order",data1);
+
+
 
                                 mCallBackOrderInfo.callBackOrder(jsonObject);
                                 mData = jsonObject.getObject("data", oderinfostatus.class);
@@ -188,6 +195,9 @@ public class MyMsgService extends Service {
                                         soundPool.play(1, 1, 1, 0, 0, 1);
                                         order_stuatus_frist = false;
                                         order_stuatus = data.order_state;
+                                        //发送一个广播 是 创建dialog
+                                        GetSiji jiedansiji = jsonObject.getObject("data", GetSiji.class);
+                                        UtilsBroadcastReceiver.sendBroadcastReceiver(MyMsgService.this, "dialog","chauffeur",jiedansiji);
                                     }
                                     //mDestinationButton.setText("查看订单");
 

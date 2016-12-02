@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
+import com.amap.api.maps.AMapUtils;
+import com.amap.api.maps.model.LatLng;
 import com.qichen.Utils.LogUtils;
 import com.qichen.Utils.UtilsMyText;
 import com.qichen.Utils.UtilsToast;
@@ -19,6 +21,7 @@ import com.qichen.UtilsNet.NetAesCallBack;
 import com.qichen.ruida.R;
 import com.qichen.ruida.adapter.itemRecyclerview;
 import com.qichen.ruida.base.BaseActivity;
+import com.qichen.ruida.bean.GetSiji;
 import com.qichen.ruida.bean.Order;
 import com.qichen.ruida.bean.oderinfostatus;
 import com.qichen.ruida.broadcastReceivers.UtilsBroadcastReceiver;
@@ -50,6 +53,9 @@ public class ShowOrderForm extends BaseActivity {
     private TextView item_tv_carphone;
     private int mOrder_tag;
     private TextView item_tv_timer;
+    private double mSiji_latitude;
+    private double mSiji_longitude;
+    private TextView mTv_juli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +78,9 @@ public class ShowOrderForm extends BaseActivity {
                 //获取倒计时时间
                 IntentFilter filter2 = new IntentFilter("timerStatus");
         registerReceiver(receiver2, filter2);
+                //获取司机位置的
+                IntentFilter filter3 = new IntentFilter("siji");
+        registerReceiver(receiver3, filter3);
 
 
 
@@ -82,6 +91,10 @@ public class ShowOrderForm extends BaseActivity {
         mOder_id = extras.getString("order_id");
         LogUtils.i("查看订单订单号码是"+mOder_id);
         mOrder_tag = extras.getInt("order_tag");
+        mSiji_latitude = extras.getDouble("siji_latitude");
+        mSiji_longitude = extras.getDouble("siji_longitude");
+
+
     }
 
 
@@ -149,7 +162,40 @@ public class ShowOrderForm extends BaseActivity {
     }
 
 
+    //获取司机的位置的广播
+    private InnerReceiver3 receiver3 = new InnerReceiver3();
 
+    public class InnerReceiver3 extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(final Context context, Intent intent) {
+            GetSiji siji_order = (GetSiji) intent.getSerializableExtra("siji_order");
+                LogUtils.i("司机的消息"+siji_order);
+                LogUtils.i("我的位置"+"位置1"+mSiji_latitude+"位置2"+mSiji_longitude);
+            double siji_v1 =0;
+            double siji_v2 =0;
+            if (null!=siji_order.positon_lat){
+                 siji_v1 = Double.parseDouble(siji_order.positon_lat);
+            }
+            if (null!=siji_order.positon_lon){
+                 siji_v2 = Double.parseDouble(siji_order.positon_lon);
+            }
+
+            double chengke_v1 = mSiji_latitude;
+            double chengke_v2 = mSiji_longitude;
+            if (siji_v1!=0||siji_v2!=0){
+                LatLng chengke = new LatLng(chengke_v1, chengke_v2);
+                LatLng siji = new LatLng(siji_v1,siji_v2);
+                //两点间距离
+                float v = AMapUtils.calculateLineDistance(chengke, siji);
+                LogUtils.i("司机距离乘客"+v);
+                int i = (int) v;
+                mTv_juli.setText("司机和你相距:"+i+"米");
+                mTv_juli.setVisibility(View.VISIBLE);
+            }
+
+        }
+    }
 
 
     //在成员变量的位置 创建一个  广播接收类
@@ -312,6 +358,9 @@ public class ShowOrderForm extends BaseActivity {
         mItem_tv_start = (TextView) findViewById(R.id.item_tv_start);
         mItem_tv_end = (TextView) findViewById(R.id.item_tv_end);
         item_tv_status = (TextView) findViewById(R.id.item_tv_status);
+        //显示距离
+        mTv_juli = (TextView) findViewById(R.id.tv_juli);
+        mTv_juli.setVisibility(View.GONE);
         //有效期
         item_tv_timer = (TextView) findViewById(R.id.item_tv_timer);
         mShowOrderForm_tv1 = (TextView) findViewById(R.id.ShowOrderForm_tv);
@@ -373,7 +422,6 @@ public class ShowOrderForm extends BaseActivity {
 
             }
         });
-
 
 
 
@@ -484,6 +532,7 @@ public class ShowOrderForm extends BaseActivity {
         unregisterReceiver(receiver);
         unregisterReceiver(receiver1);
         unregisterReceiver(receiver2);
+        unregisterReceiver(receiver3);
     }
 
 }
