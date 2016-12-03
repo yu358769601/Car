@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 13:25 . 2016年11月20日
- * 描述: 订单列表bean
+ * 描述: 订单列表bean 显示在列表里面的内容
  * getPassengerOverOrder
  * <p>
  * <p>
@@ -13,6 +13,15 @@ import java.util.List;
  */
 
 public class OrderListBean {
+
+
+//    order_add_time 订单添加时间;
+//    "订单号:"+order_id 订单号;
+//   begion_address 开始地点;
+//    end_address 结束地点;
+//    "价格:"+order_money+"元" 订单价格;
+//    ,order_state "订单状态:已完成";
+//
 
 
     /**

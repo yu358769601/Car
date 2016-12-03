@@ -3,24 +3,33 @@ package com.qichen.ruida.bean;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 17:59 . 2016年11月17日
- * 描述:个人信息 bean
+ * 描述:个人信息 bean 回显
  * <p>
  * <p>
  * 备注:
  */
 
 public class PassengerUserInfo {
+//    hashtable.put("action", "getXinXi");
+    //乘客的注册的电话号码
+//    hashtable.put("passenger_telephone", SQUtils.getStrings(this, "passenger_telephone", ""));
 
-
-    /**
+    /**乘客编号
      * passenger_id : 5
+     * 乘客电话
      * passenger_telephone : 18603663028
      * passenger_password :
+     * 乘客姓名
      * passenger_nickname : 王瑞环
+     * 乘客头像
      * passenger_photo :
+     * 乘客性别
      * passenger_sex : 男
+     * 乘客相关信息
      * passenger_industry : 发明
+     * 乘客余额
      * passenger_money : 151.40
+     * 乘客工作
      * passenger_job : 美工
      * passenger_time : 0
      * passenger_from : Android

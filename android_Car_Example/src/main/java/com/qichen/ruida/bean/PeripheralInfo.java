@@ -12,16 +12,15 @@ import java.util.List;
  */
 
 public class PeripheralInfo {
-    /**
-     * positon_name :
-     * positon_time : 0
-     * positon_lat : 45.7486540
-     * positon_driver_id : 3
-     * juli : 0.2
-     * positon_id : 26
-     * positon_passenger : 0
-     * positon_lon : 126.6051140
-     */
+    //获取周边司机位置
+//    hashtable.put("action","passengerPosition");
+    //乘客经纬度
+//    hashtable.put("passenger_lon",mStartPosition.longitude+"");
+//    hashtable.put("passenger_lat",mStartPosition.latitude+"");
+    //乘客认证信息
+//    hashtable.put("passenger_id",SQUtils.getId(MainActivity.this));
+
+
     /**
      * positon_name : 名字
      * positon_time : 最后一次定位时间

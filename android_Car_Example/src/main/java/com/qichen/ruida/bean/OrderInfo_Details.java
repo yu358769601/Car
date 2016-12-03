@@ -12,6 +12,28 @@ import java.io.Serializable;
  */
 
 public class OrderInfo_Details implements Serializable{
+//    hashtable.put("action", "getOrderDetail");
+    //订单编号
+//    hashtable.put("order_id",oders.order_id );
+
+//    "订单号:"+mOrderInfo_details.order_id);
+//    "起点:"+mOrderInfo_details.begion_address);
+//    "终点:"+mOrderInfo_details.end_address);
+//
+//    "司机电话:"+UtilsMyText.hide4Num(mOrderInfo_details.driver_telephone));
+//
+//    "司机姓名:" + UtilsMyText.getfristString(mOrderInfo_details.driver_realname)+"师傅");
+//
+//    "开始时间:"+mOrderInfo_details.up_time1);
+//    "结束时间:"+mOrderInfo_details.down_time1);
+//    "里程数:"+mOrderInfo_details.order_mileage);
+//    "路桥费:"+mOrderInfo_details.order_luqiao);
+//    "停车费:"+mOrderInfo_details.order_tingche);
+//    "清洁费:"+mOrderInfo_details.order_qingjie);
+//    "高峰倍:"+mOrderInfo_details.order_scale);
+//    "时长:"+UtilsMyText.get2DoubleString(mOrderInfo_details.chengche_time)+"分");
+//    "价格:"+mOrderInfo_details.order_money+"元");
+
 
 
     /**

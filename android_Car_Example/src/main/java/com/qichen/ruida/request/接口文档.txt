@@ -1,0 +1,40 @@
+取消订单 网络请求
+                    hashtable.put("action", "passengerCancleOrder");
+					hashtable.put("order_id", mOder_id);
+					hashtable.put("order_cancle_describe", "超时");
+
+获取金钱的网络请求
+                    hashtable.put("action", "passengerGetMoney");
+                    hashtable.put("passenger_id", SQUtils.getId(activity));
+获取订单状态
+                    hashtable.put("action", "passengerGetOrder");
+                    hashtable.put("passenger_id", SQUtils.getId(mActivity1));
+获取订单详情 的网络请求
+                    hashtable.put("action", "passengerGetOrderDetail");
+                    hashtable.put("order_id",mActivity1.mOder_id );
+获取订单列表的网络请求
+                    hashtable.put("action", "getPassengerOverOrder");
+                    hashtable.put("passenger_id", SQUtils.getId(activity));
+                    hashtable.put("pageNo", pn+"");
+微信支付请求
+                    hashtable.put("passenger_id", SQUtils.getId(activity));
+                    hashtable.put("money", mActivity1.mPayment);
+发送订单 网络请求
+                    //String[] startPoint = mActivity1.getStartPoint();
+                    //String[] endPoint = mActivity1.getEndPoint();
+                    hashtable.put("action", "sendOrder");
+                    hashtable.put("passenger_id", SQUtils.getId(mActivity1));
+                    hashtable.put("begion_address", mActivity1.getStartPointString());
+                    hashtable.put("end_address", mActivity1.getEndPointString());
+                    hashtable.put("begion_lat", startPoint[0]);
+                    hashtable.put("begion_lon", startPoint[1]);
+                    hashtable.put("end_lat", endPoint[0]);
+                    hashtable.put("end_lon", endPoint[1]);
+                    hashtable.put("order_time", mActivity1.mYuyue_text.getText().toString());
+                    hashtable.put("order_type", mActivity1.order_type+"");
+                    hashtable.put("order_compute_money", mActivity1.yuan);
+                    hashtable.put("order_compute_mileage", mActivity1.juli);
+                    hashtable.put("order_compute_time", mActivity1.fen);
+
+自动更新请求
+                    hashtable.put("action", "getVersionCodePassenger");

@@ -11,6 +11,16 @@ package com.qichen.ruida.bean;
  */
 
 public class Order_form_zhifubao {
+
+//    //action 告诉后台 这是一个什么请求 zhifubaoPay 支付宝交易
+//    hashtable.put("action", "zhifubaoPay");
+//    //payment 支付金额
+//    hashtable.put("money", mPayment);
+//    //哪个用户支付的
+//    //hashtable.put("passenger_id", SQUtils.getStrings(this, "passenger_id", ""));
+//    hashtable.put("passenger_id", SQUtils.getId(this));
+
+
     /**
      * payType : 支付宝
      * payMoney : 10

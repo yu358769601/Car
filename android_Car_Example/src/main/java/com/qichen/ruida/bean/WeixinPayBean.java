@@ -10,9 +10,11 @@ package com.qichen.ruida.bean;
  */
 
 public class WeixinPayBean {
+//    hashtable.put("passenger_id", SQUtils.getId(activity));
+    //支付的金钱
+//    hashtable.put("money", mActivity1.mPayment);
 
-
-    /**
+    /**都是后台过来的数据 微信标准格式
      * sign : 6B9DEB9A71A6A006592FE6FB0DE0980A
      * partnerid : 1413235402
      * appid : wx61f9402d62035e9b

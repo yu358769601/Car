@@ -10,13 +10,21 @@ package com.qichen.ruida.bean;
  */
 
 public class DriverPositon {
+////必要字段
+//
+//    //获取周边司机位置
+//    hashtable.put("action","getDriverPositon");
+    //订单编号
+//    hashtable.put("order_id",mOder_id);
 
-
-    /**
-     * positon_lat : 45.7389610
-     * order_state : 1
-     * driver_id : 2
-     * positon_lon : 126.5699140
+    /**  纬度
+         * positon_lat : 45.7389610
+     *  订单状态
+         * order_state : 1
+     * 司机编号
+         * driver_id : 2
+     * 经度
+         * positon_lon : 126.5699140
      */
 
         public String positon_lat;

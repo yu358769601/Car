@@ -5,26 +5,40 @@ import java.io.Serializable;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 13:05 . 2016年11月19日
- * 描述:passengerGetOrder
+ * 描述:passengerGetOrder 其实这个类就是司机
  * <p>
  * <p>
  * 备注:
  */
 
 public class oderinfostatus implements Serializable {
+
+
+//    hashtable.put("action", "passengerGetOrder");
+    //乘客身份认证
+//    hashtable.put("passenger_id", SQUtils.getId(this));
+
     /**
      * up_lon : 0.0000000
      * order_exception : 0
      * up_address :
+     * 订单状态
      * order_state : 1
+     * 路桥费
      * order_luqiao : 0.00
+     * 开始 开始经度
      * begion_lat : 45.7464600
+     *
      * driver_time : 1479622906
+     * 订单预计金额
      * order_compute_money : 102.90
+     *
      * driver_car_license_photo :
      * down_lon : 0.0000000
      * down_lat : 0.0000000
+     * 开始 纬度
      * begion_lon : 126.6053210
+     *
      * order_receive_address : 通达街靠近银恒大厦
      * order_compute_time : 51
      * driver_telephone : 18945017628  司机电话

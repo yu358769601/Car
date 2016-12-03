@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 /**
  * Created by 35876 于萌萌
  * 创建日期: 10:59 . 2016年11月14日
- * 描述:
+ * 描述:SP 工具类
  * <p>
  * <p>
  * 备注:
