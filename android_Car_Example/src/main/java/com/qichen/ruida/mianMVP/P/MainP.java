@@ -56,6 +56,12 @@ public class MainP extends MVP_base<MainCallBack> {
         this.listener = listener;
     }
 
+    /**
+     * 计费算法
+     * @param distance 公里数
+     * @param duration 时间
+     * @return
+     */
     @Override
     public double[] sun(float distance, int duration) {
         // 公里数小于 <=3 公里  9元 +时间(分钟) * 0.3元

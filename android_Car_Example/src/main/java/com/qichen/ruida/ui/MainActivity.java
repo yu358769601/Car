@@ -430,7 +430,7 @@ public class MainActivity extends BaseActivity implements OnCameraChangeListener
 			//如果手机联网了
 		if (NetworkUtils.isNetworkAvailable(this)){
 			//检查更新
-			//upDateApp();
+			upDateApp();
 		}else{
 			UtilsToast.showToast(this, "请检查手机网络连接!");
 		}

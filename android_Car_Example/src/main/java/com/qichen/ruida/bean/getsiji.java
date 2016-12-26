@@ -12,17 +12,29 @@ import java.io.Serializable;
  */
 
 public class GetSiji implements Serializable {
-
+//    hashtable.put("action", "passengerGetOrder");
+    //乘客身份认证
+//    hashtable.put("passenger_id", SQUtils.getId(this));
     /**
+     * 订单状态
      * order_state : 1
+     * 起始地点
      * begion_address : 工农街道天鹅湾天鹅湾（群力第五大道）
+     * 纬度
      * positon_lat : 45.7389580
+     * 司机姓名
      * driver_realname : 金松一
+     * 司机电话
      * driver_telephone : 13664608180
+     * 订单添加时间
      * order_add_time : 2016-11-29 18:02:05
+     * 订单编号
      * order_id : 431
+     * 司机车牌号
      * driver_car : 黑A 135486
+     * 结束地点
      * end_address : 哈尔滨站
+     * 经度
      * positon_lon : 126.5701260
      */
 
